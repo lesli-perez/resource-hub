@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Test",
+    "file": "files/TEST/test.txt",
+    "image": "files/TEST/test.jpeg",
+    "tags": ["AI", "Beginner", "Activity"],
+    "description": "Blah blah blah."
+  },
+{
+    "title": "Test",
+    "file": "files/TEST/test.txt",
+    "image": "files/TEST/test.jpeg",
+    "tags": ["AI", "Beginner", "Lecture"],
+    "description": "Yada yada yada."
+  }
+]

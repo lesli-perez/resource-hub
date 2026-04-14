@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resource Hub</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+      background-color: #141414;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: aliceblue;
+      margin-bottom: 15px;
+    }
+
+    .status {
+      font-size: 14px;
+      color: #cfcfcf;
+    }
+
+    .reset-btn {
+      background: #1d1e1f;
+      border: 1px solid #ddd;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color:white;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #1d1e1f;
+
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .card.downloaded {
+      background-color: #e0e0e0;
+      color: black;
+    }
+
+    .left {
+      flex: 2;
+    }
+
+    .right {
+      flex: 1;
+      max-width: 250px;
+      color: #ffffff;
+
+      border-left: 2px solid #333;
+      padding-left: 15px;
+    }
+
+    .left h3 {
+      color: aliceblue;
+      margin-top: 0;
+    }
+
+    .tag {
+      background: #eeeeee;
+      padding: 3px 8px;
+      margin-right: 5px;
+      cursor: pointer;
+      color: #000;
+      border-radius: 4px;
+    }
+
+    p {
+      color: #ffffff;
+      margin: 5px 0;
+    }
+
+    a {
+      color: #f290ff;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1 style="color: aliceblue;">📁 Resource Hub</h1>
+
+<div class="topbar">
+  <div class="status" id="statusText">Viewing All Files - click on a tag to add a filter.</div>
+  <button class="reset-btn" onclick="resetFilter()">Show All</button>
+</div>
+
+<input type="text" id="search" placeholder="Search..." onkeyup="filter()">
+
+<div id="container"></div>
+
+<script>
+let data = [];
+let currentFilter = null;
+
+fetch('files.json')
+  .then(res => res.json())
+  .then(json => {
+    data = json;
+    render(data);
+  });
+
+function render(items) {
+  const container = document.getElementById("container");
+  container.innerHTML = "";
+
+  items.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "card";
+
+    div.innerHTML = `
+      <div class="left">
+        <h3>${item.title}</h3>
+        ${item.image ? `<img src="${item.image}" width="200">` : ""}
+        <p>
+          ${item.tags.map(tag => `<span class="tag" onclick="filterTag('${tag}')">${tag}</span>`).join("")}
+        </p>
+        <a href="${item.file}" target="_blank" onclick="markDownloaded(this)">Open/Download Files</a>
+      </div>
+
+      <div class="right">
+        <p>${item.description || ""}</p>
+      </div>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+function filter() {
+  const q = document.getElementById("search").value.toLowerCase();
+
+  currentFilter = q || null;
+
+  updateStatus();
+
+  render(data.filter(d =>
+    d.title.toLowerCase().includes(q) ||
+    d.tags.join(" ").toLowerCase().includes(q)
+  ));
+}
+
+function filterTag(tag) {
+  currentFilter = tag;
+  updateStatus();
+
+  render(data.filter(d => d.tags.includes(tag)));
+}
+
+function resetFilter() {
+  document.getElementById("search").value = "";
+  currentFilter = null;
+  updateStatus();
+  render(data);
+}
+
+function updateStatus() {
+  const status = document.getElementById("statusText");
+
+  if (!currentFilter) {
+    status.textContent = "Viewing All Files - click on a tag to add a filter.";
+  } else {
+    status.textContent = "Filtered by: " + currentFilter;
+  }
+}
+
+function markDownloaded(link) {
+  const card = link.closest(".card");
+  card.classList.add("downloaded");
+}
+</script>
+
+</body>
+</html>
