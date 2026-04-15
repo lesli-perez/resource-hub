@@ -1,0 +1,90 @@
+body {
+  font-family: Arial;
+  margin: 40px;
+  background-color: #141414;
+}
+
+h1 {
+  color: aliceblue;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: aliceblue;
+  margin-bottom: 15px;
+}
+
+.status {
+  font-size: 14px;
+  color: #cfcfcf;
+}
+
+.reset-btn {
+  background: #1d1e1f;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #1d1e1f;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.card.downloaded {
+  border-color: #f290ff;
+}
+
+.left {
+  flex: 0 1 auto;   
+}
+
+.right {
+  flex: 1 1 300px;
+  color: #ffffff;
+  border-left: 2px solid #333;
+  padding-left: 35px;
+}
+
+.left h3 {
+  color: aliceblue;
+  margin-top: 0;
+}
+
+.tag {
+  background: #eeeeee;
+  padding: 3px 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #000;
+  border-radius: 4px;
+}
+
+p {
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+a {
+  color: #e99dd8;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+a:hover {
+  color: #ececec;
+}

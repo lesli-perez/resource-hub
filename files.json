@@ -1,16 +1,31 @@
 [
-  {
-    "title": "Test",
-    "file": "files/TEST/test.txt",
-    "image": "files/TEST/test.jpeg",
-    "tags": ["AI", "Beginner", "Activity"],
-    "description": "Blah blah blah."
-  },
-{
-    "title": "Test",
-    "file": "files/TEST/test.txt",
-    "image": "files/TEST/test.jpeg",
-    "tags": ["AI", "Beginner", "Lecture"],
-    "description": "Yada yada yada."
-  }
+    {
+        "title": "Google Teachable Machine",
+        "url": "https://teachablemachine.withgoogle.com/train",
+        "file": "files/Teachable Machine",
+        "image": "files/Teachable Machine/teachable-machine-test.png",
+        "tags": [
+            "Plug and Play",
+            "5 - 30 mins.",
+            "Activity",
+            "Beginner"
+        ],
+        "description": [
+            "Incredibly easy to start using it. Set up takes less than a minute. Possible activities to use this tool with include:\n",
+            "<ul><li>Use different inputs/number of image samples (many samples vs few samples) and see how this affects the model.</li> <li>Change the parameters (epochs, batch size, learning rate) to see how it affects the test results. Look at the accuracy/loss and plot them.</li><li>Check for biases/imbalances in the data set and attempt to correct it. Example: Class 1 is 'highlighters', but only yellow ones are used in training, so the model might fail to recognize other colors.</li><li>Add noise to the input images/audio to see how it affects results.</li></ul>\n",
+            "It isn't very technically difficult and doesn't require a lot of background knowledge, but seems like a very useful tool to introduce the topic. Also, lots of activities can be created and implemented."
+        ]
+    },
+    {
+        "title": "Test",
+        "url": "",
+        "file": "files/TEST/test.txt",
+        "image": "files/TEST/test.jpeg",
+        "tags": [
+            "AI",
+            "Beginner",
+            "Activity"
+        ],
+        "description": "Blah blah blah."
+    }
 ]

@@ -2,97 +2,14 @@
 <html>
 <head>
   <title>Resource Hub</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 40px;
-      background-color: #141414;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: aliceblue;
-      margin-bottom: 15px;
-    }
-
-    .status {
-      font-size: 14px;
-      color: #cfcfcf;
-    }
-
-    .reset-btn {
-      background: #1d1e1f;
-      border: 1px solid #ddd;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      color:white;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      padding: 15px;
-      margin: 10px 0;
-      background-color: #1d1e1f;
-
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .card.downloaded {
-        border-color: #f290ff;
-    }
-
-    .left {
-      flex: 2;
-    }
-
-    .right {
-      flex: 1;
-      max-width: 250px;
-      color: #ffffff;
-
-      border-left: 2px solid #333;
-      padding-left: 15px;
-    }
-
-    .left h3 {
-      color: aliceblue;
-      margin-top: 0;
-    }
-
-    .tag {
-      background: #eeeeee;
-      padding: 3px 8px;
-      margin-right: 5px;
-      cursor: pointer;
-      color: #000;
-      border-radius: 4px;
-    }
-
-    p {
-      color: #ffffff;
-      margin: 5px 0;
-    }
-
-    a {
-      color: #f290ff;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include marked.js for Markdown support -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
 
-<h1 style="color: aliceblue;">📁 Resource Hub</h1>
+<h1>📁 Resource Hub</h1>
 
 <div class="topbar">
   <div class="status" id="statusText">Viewing All Files - click on a tag to add a filter.</div>
@@ -107,6 +24,7 @@
 let data = [];
 let currentFilter = null;
 
+// Load JSON file
 fetch('files.json')
   .then(res => res.json())
   .then(json => {
@@ -114,6 +32,7 @@ fetch('files.json')
     render(data);
   });
 
+// Render function
 function render(items) {
   const container = document.getElementById("container");
   container.innerHTML = "";
@@ -122,9 +41,16 @@ function render(items) {
     const div = document.createElement("div");
     div.className = "card";
 
+    // Join description array into a single string
+    const descriptionHtml = Array.isArray(item.description) 
+      ? item.description.join("\n\n") 
+      : item.description || "";
+
     div.innerHTML = `
       <div class="left">
-        <h3>${item.title}</h3>
+        <h3>  
+            <a href="${item.url}" target="_blank">${item.title}</a>
+        </h3>
         ${item.image ? `<img src="${item.image}" width="200">` : ""}
         <p>
           ${item.tags.map(tag => `<span class="tag" onclick="filterTag('${tag}')">${tag}</span>`).join("")}
@@ -133,7 +59,7 @@ function render(items) {
       </div>
 
       <div class="right">
-        <p>${item.description || ""}</p>
+        ${marked.parse(descriptionHtml)}
       </div>
     `;
 
@@ -141,11 +67,10 @@ function render(items) {
   });
 }
 
+// Search filter
 function filter() {
   const q = document.getElementById("search").value.toLowerCase();
-
   currentFilter = q || null;
-
   updateStatus();
 
   render(data.filter(d =>
@@ -154,6 +79,7 @@ function filter() {
   ));
 }
 
+// Filter by tag
 function filterTag(tag) {
   currentFilter = tag;
   updateStatus();
@@ -161,6 +87,7 @@ function filterTag(tag) {
   render(data.filter(d => d.tags.includes(tag)));
 }
 
+// Reset filters
 function resetFilter() {
   document.getElementById("search").value = "";
   currentFilter = null;
@@ -168,9 +95,9 @@ function resetFilter() {
   render(data);
 }
 
+// Update status bar
 function updateStatus() {
   const status = document.getElementById("statusText");
-
   if (!currentFilter) {
     status.textContent = "Viewing All Files - click on a tag to add a filter.";
   } else {
@@ -178,6 +105,7 @@ function updateStatus() {
   }
 }
 
+// Mark card as downloaded
 function markDownloaded(link) {
   const card = link.closest(".card");
   card.classList.add("downloaded");
