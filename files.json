@@ -2,7 +2,7 @@
     {
         "title": "Google Teachable Machine",
         "url": "https://teachablemachine.withgoogle.com/train",
-        "file": "files/Teachable Machine",
+        "file": "files/Teachable Machine/teachable-machine.zip",
         "image": "files/Teachable Machine/teachable-machine-test.png",
         "tags": [
             "Plug and Play",
