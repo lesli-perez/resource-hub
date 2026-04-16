@@ -34,5 +34,24 @@
             "This could be useful for learning about prompt engineering and fixing/analysing code. Maybe only letting the students prompt the AI once and then they have to fix the rest themselves. This could also be done with other games like NYT - Wordle. I did two prompts for comparison, one simple prompt, and one detailed prompt, both had their issues. I provided the prompts and the results under 'Prompt Engineering Comparison' and I included the code under the Detailed and Simple Prompt folders.",
             "I think this is good for beginners or more advanced students depending on the activity requirements, but it can also can teach students about web dev."
         ]
+    },
+    {
+        "title": "Interactive Transformer Visualization of GPT-2",
+        "url": "https://myai101.com/hourofai/gpt2",
+        "file": "files/Interactive Transformer/transformer-visualization.png",
+        "image": "files/Interactive Transformer/transformer-visualization.png",
+        "tags": [
+            "Hour of AI",
+            "Tool",
+            "Lecture",
+            "5 mins.",
+            "Intermediate",
+            "Plug and Play"
+        ],
+        "description": [
+            "This tool generates one word at a time and visualizes the steps it takes to guess the next word. Using the tool is very easy, the website includes a bunch of text at the bottom explaining what the transformer is doing.",
+            "The concepts are easy to understand, but it is just a bunch of text, so maybe turning it into slides and letting students create sentences would be a good class activity.",
+            "The lecture part is what would take the longest, but the actual tool shouldn't take very long. It also only has one parameter: Temperature which 'Changes the output probability distribution and randomness of next token. '"
+        ]
     }
 ]
