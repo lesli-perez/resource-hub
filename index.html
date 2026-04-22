@@ -116,10 +116,17 @@ function applyFilters() {
 
 /* RESET */
 function resetFilter() {
-  searchQuery = "";
-  activeTags.clear();
   document.getElementById("search").value = "";
-  applyFilters();
+  currentFilter = null;
+
+  updateStatus();
+
+  // CLEAR ALL CHECKBOXES
+  document.querySelectorAll(".filter-menu input[type='checkbox']").forEach(cb => {
+    cb.checked = false;
+  });
+
+  render(data);
 }
 
 /* STATUS */
