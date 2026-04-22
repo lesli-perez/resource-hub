@@ -39,7 +39,7 @@ let activeTags = new Set();
 
 fetch('files.json')
   .then(res => res.json())
-  .then(json => {
+  .then(json => { 
     data = json;
     render(data);
     buildTagMenu();
