@@ -2,8 +2,8 @@
   {
     "title": "Google Teachable Machine",
     "url": "https://teachablemachine.withgoogle.com/train",
-    "file": "files/Teachable Machine/teachable-machine.zip",
-    "image": "files/Teachable Machine/teachable-machine-test.png",
+    "file": "files/Teachable-Machine/teachable-machine.zip",
+    "image": "files/Teachable-Machine/teachable-machine-test.png",
     "tags": [
       "Plug and Play",
       "5 mins.",
@@ -22,9 +22,9 @@
   },
   {
     "title": "Introduction to AI-Assisted Coding",
-    "url": "./files/AI Assisted Code/aicode.html",
-    "file": "files/AI Assisted Code/AI Assisted Coding Assignment.zip",
-    "image": "files/AI Assisted Code/connections-prompt.png",
+    "url": "./files/AI-Assisted-Code/aicode.html",
+    "file": "files/AI-Assisted-Code/AI Assisted Coding Assignment.zip",
+    "image": "files/AI-Assisted-Code/connections-prompt.png",
     "tags": [
       "Hour of AI",
       "Activity",
@@ -46,8 +46,8 @@
   {
     "title": "Interactive Transformer Visualization of GPT-2",
     "url": "https://myai101.com/hourofai/gpt2",
-    "file": "files/Interactive Transformer/visualizers.zip",
-    "image": "files/Interactive Transformer/transformer-visualization.png",
+    "file": "files/Interactive-Transformer/visualizers.zip",
+    "image": "files/Interactive-Transformer/transformer-visualization.png",
     "tags": [
       "Hour of AI",
       "Tool",
@@ -67,8 +67,8 @@
   {
     "title": "Artificial Neuron",
     "url": "https://ellipsisedu.com/en/hourofai-artificialneuron",
-    "file": "files/Artificial Neuron/neurons.zip",
-    "image": "files/Artificial Neuron/single-neuron.png",
+    "file": "files/Artificial-Neuron/neurons.zip",
+    "image": "files/Artificial-Neuron/single-neuron.png",
     "tags": [
       "Hour of AI",
       "Activity",
