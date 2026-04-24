@@ -61,7 +61,7 @@
       "This tool visualizes how transformer-based language models generate text one token at a time, illustrating the step-by-step prediction process.",
       "The interface includes explanatory text that describes how the model processes input and produces output. The main adjustable parameter is temperature, which controls randomness in token selection.",
       "Suggested classroom applications include converting the explanation into guided slides or having students construct sentences while observing model behavior.",
-      "Additional resources include a 'Tokenizer Visualizer': https://myai101.com/hourofai/tokenizer and a lecture on transformers: https://myai101.com/hourofai/transformer which provide further insight into model structure and token processing. Included files consist of screenshots of these tools."
+      "Additional resources include a <a href=\"https://myai101.com/hourofai/tokenizer\" target = \"_blank\">'Tokenizer Visualizer'</a> and a <a href=\"https://myai101.com/hourofai/transformer\" target = \"_blank\">lecture on transformers</a> which provide further insight into model structure and token processing. Included files consist of screenshots of these tools."
     ]
   },
   {
@@ -84,7 +84,7 @@
       "The activity is designed to support conceptual understanding rather than advanced technical implementation, making it suitable for introductory learners.",
       "Assessment can be supported through documentation or screenshot-based submissions of completed activities.",
       "Supplementary materials include screenshots of the activity and related external resources that reinforce the concept of neural computation.",
-      "This website on 'How to Think Like a Neuron' is similar to this activity: https://ai4ga.org/think-like-a-neuron-part-2/. It provides an additional perspective on neural network concepts and reinforces understanding of how artificial neurons process information."
+      "This website on <a href=\"https://ai4ga.org/think-like-a-neuron-part-2/\" target = \"_blank\">'How to Think Like a Neuron'</a> is similar to this activity. It provides an additional perspective on neural network concepts and reinforces understanding of how artificial neurons process information."
     ]
   },
 
