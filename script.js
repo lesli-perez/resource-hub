@@ -28,6 +28,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("click", (e) => {
+  const menu = document.getElementById("filterMenu");
+  const wrapper = document.querySelector(".filter-wrapper");
+  const clearBtn = document.getElementById("clearFiltersBtn");
+  const arrow = document.getElementById("filterArrow");
+
+  const clickedInside = wrapper.contains(e.target);
+  const clickedClear = clearBtn && clearBtn.contains(e.target);
+
+  if (!clickedInside && !clickedClear) {
+    menu.classList.remove("show");
+
+    // sync arrow state
+    if (arrow) arrow.textContent = "▼";
+  }
+});
+
 /* =========================
    ESC KEY CLOSE
 ========================= */
