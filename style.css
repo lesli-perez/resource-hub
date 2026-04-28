@@ -79,6 +79,8 @@ input {
   cursor: pointer;
 }
 
+
+
 /* FILTER DROPDOWN */
 .filter-menu {
   display: none;
@@ -405,4 +407,17 @@ input {
   .step img {
     width: 100%;
   }
+}
+
+/*CLEAR FILTERS BUTTON*/
+.clear-btn {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #f5f5f5;
 }

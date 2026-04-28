@@ -4,16 +4,13 @@
     "url": "https://teachablemachine.withgoogle.com/train",
     "file": "files/Teachable-Machine/teachable-machine.zip",
     "image": "files/Teachable-Machine/teachable-machine-test.png",
-    "tags": [
-      "Plug and Play",
-      "5 mins.",
-      "Activity",
-      "Tool",
-      "Beginner",
-      "Machine Learning",
-      "No Code",
-      "AI"
-    ],
+    "tags": {
+      "Format": ["Plug and Play"],
+      "Time": ["5 mins."],
+      "Type": ["Activity", "Tool"],
+      "Level": ["Beginner"],
+      "Topic": ["Machine Learning", "AI", "No Code"]
+    },
     "description": [
       "This tool provides a simple interface for creating machine learning models without requiring coding experience. Setup time is minimal, making it suitable for introductory AI exploration.",
       "<ul><li>Compare model performance using different quantities of training samples (few vs many).</li><li>Adjust parameters such as epochs, batch size, and learning rate to observe their impact on accuracy and loss.</li><li>Investigate dataset bias or imbalance (e.g., training on only one color of object may reduce generalization).</li><li>Test model robustness by introducing noise into image or audio inputs.</li></ul>",
@@ -25,17 +22,13 @@
     "url": "./files/AI-Assisted-Code/aicode.html",
     "file": "files/AI-Assisted-Code/AI Assisted Coding Assignment.zip",
     "image": "files/AI-Assisted-Code/connections-prompt.png",
-    "tags": [
-      "Hour of AI",
-      "Activity",
-      "AI Assisted Coding",
-      "1 hour",
-      "Intermediate",
-      "Beginner",
-      "Web Development",
-      "Prompt Engineering",
-      "AI"
-    ],
+    "tags": {
+      "Format": ["Project"],
+      "Type": ["Activity"],
+      "Time": ["1 hour"],
+      "Level": ["Beginner", "Intermediate"],
+      "Topic": ["AI Assisted Coding", "Web Development", "Prompt Engineering", "AI"]
+    },
     "description": [
       "This activity explores AI-assisted programming through the recreation of a Connections-style game. The original online IDE environment was unavailable, so the assignment was rebuilt as a standalone web project.",
       "The exercise is designed to support learning in prompt engineering and code analysis. A structured approach can be used where students generate code using AI once, then focus on debugging and improving the output independently.",
@@ -48,15 +41,13 @@
     "url": "https://myai101.com/hourofai/gpt2",
     "file": "files/Interactive-Transformer/visualizers.zip",
     "image": "files/Interactive-Transformer/transformer-visualization.png",
-    "tags": [
-      "Hour of AI",
-      "Tool",
-      "Lecture",
-      "5 mins.",
-      "Intermediate",
-      "Plug and Play",
-      "AI"
-    ],
+    "tags": {
+      "Format": ["Plug and Play"],
+      "Type": ["Tool", "Lecture"],
+      "Time": ["5 mins."],
+      "Level": ["Intermediate"],
+      "Topic": ["AI", "LLM"]
+    },
     "description": [
       "This tool visualizes how transformer-based language models generate text one token at a time, illustrating the step-by-step prediction process.",
       "The interface includes explanatory text that describes how the model processes input and produces output. The main adjustable parameter is temperature, which controls randomness in token selection.",
@@ -69,16 +60,13 @@
     "url": "https://ellipsisedu.com/en/hourofai-artificialneuron",
     "file": "files/Artificial-Neuron/neurons.zip",
     "image": "files/Artificial-Neuron/single-neuron.png",
-    "tags": [
-      "Hour of AI",
-      "Activity",
-      "Lecture",
-      "1 hour",
-      "Beginner",
-      "AI",
-      "Machine Learning",
-      "Neural Networks"
-    ],
+    "tags": {
+      "Format": ["Self-paced"],
+      "Type": ["Activity", "Lecture"],
+      "Time": ["1 hour"],
+      "Level": ["Beginner"],
+      "Topic": ["AI", "Machine Learning", "Neural Networks"]
+    },
     "description": [
       "This guided activity introduces the concept of artificial neurons through interactive explanations and embedded quizzes. It focuses on foundational machine learning concepts such as inputs, weights, and bias.",
       "The activity is designed to support conceptual understanding rather than advanced technical implementation, making it suitable for introductory learners.",
@@ -87,22 +75,18 @@
       "This website on <a href=\"https://ai4ga.org/think-like-a-neuron-part-2/\" target = \"_blank\">'How to Think Like a Neuron'</a> is similar to this activity. It provides an additional perspective on neural network concepts and reinforces understanding of how artificial neurons process information."
     ]
   },
-
   {
     "title": "API Explorer - Class Activity",
     "url": "https://class-lecture-api.vercel.app/",
     "file": "files/API-Explorer/api-activity.png",
     "image": "files/API-Explorer/api-activity.png",
-    "tags": [
-      "Activity",
-      "API",
-      "Web Development",
-      "App Development",
-      "JavaScript",
-      "Beginner",
-      "Intermediate",
-      "1 hour"
-    ],
+    "tags": {
+      "Format": ["Self-paced"],
+      "Type": ["Activity"],
+      "Time": ["1 hour"],
+      "Level": ["Beginner", "Intermediate"],
+      "Topic": ["API", "Web Development", "App Development", "JavaScript"]
+    },
     "description": [
       "This interactive activity introduces students to working with APIs using JavaScript fetch requests. It provides a sandbox environment where users can modify API calls and observe real-time JSON responses.",
       "<ul><li>Practice using query parameters to filter and sort data (e.g., category, platform, popularity).</li><li>Learn how to retrieve a single resource using path parameters (e.g., fetching a game by ID).</li><li>Understand how API keys work by testing requests with and without authentication.</li><li>Explore error handling by comparing valid and invalid requests and analyzing status codes.</li></ul>",
@@ -114,16 +98,13 @@
     "url": "https://www.youtube.com/watch?v=M0LJ9EsS_Ak",
     "file": "files/Godot-multiplayer/godot4-multiplayer.png",
     "image": "files/Godot-multiplayer/godot4-multiplayer.png",
-    "tags": [
-      "Tutorial",
-      "Game Development",
-      "Godot 4",
-      "Multiplayer",
-      "Computer Networking",      
-      "3D Game",
-      "Intermediate",
-      "30 minutes"
-    ],
+    "tags": {
+      "Format": ["Self-paced"],
+      "Type": ["Tutorial"],
+      "Time": ["30 mins."],
+      "Level": ["Intermediate"],
+      "Topic": ["Game Development", "Godot 4", "Multiplayer", "Computer Networking", "3D Game"]
+    },
     "description": [
       "This tutorial demonstrates how to create a basic 3D multiplayer game in Godot 4 using built-in networking tools. It walks through setting up a host and client system, spawning players, and synchronizing gameplay across multiple instances.",
       "<ul><li>Host and join system using ENet multiplayer peer.</li><li>Player spawning with MultiplayerSpawner.</li><li>RPCs for syncing and removing players.</li><li>Position and rotation sync with MultiplayerSynchronizer.</li></ul>",
@@ -135,22 +116,16 @@
     "url": "https://learn.koriel.net",
     "file": "files/Koriel-intro/intro-cs.png",
     "image": "files/Koriel-intro/intro-cs.png",
-    "tags": [
-      "Course",
-      "Computer Science",
-      "Beginner",
-      "Self-paced",
-      "Binary",
-      "Logic",
-      "Hardware",
-      "History of CS"
-    ],
+    "tags": {
+      "Type": ["Course"],
+      "Level": ["Beginner"],
+      "Format": ["Self-paced"],
+      "Topic": ["Computer Science", "Binary", "Logic", "Hardware", "History of CS"]
+    },
     "description": [
       "A self-paced introductory course covering the fundamentals of computer science and programming.",
-     "<ul><li><a href=\"https://learn.koriel.net/modules/binary\" target=\"_blank\">Binary Module:</a> How computers store and process data using 0s and 1s.</li><li><a href=\"https://learn.koriel.net/modules/logic\" target=\"_blank\">Logic Module:</a> How computers use boolean values to make decisions.</li><li><a href=\"https://learn.koriel.net/modules/hardware\" target=\"_blank\">Hardware Module:</a> evolution of computers and how software runs on physical systems.</li></ul>",
+      "<ul><li><a href=\"https://learn.koriel.net/modules/binary\" target=\"_blank\">Binary Module:</a> How computers store and process data using 0s and 1s.</li><li><a href=\"https://learn.koriel.net/modules/logic\" target=\"_blank\">Logic Module:</a> How computers use boolean values to make decisions.</li><li><a href=\"https://learn.koriel.net/modules/hardware\" target=\"_blank\">Hardware Module:</a> evolution of computers and how software runs on physical systems.</li></ul>",
       "Designed for complete beginners with no prior experience, introducing core concepts that underpin all modern computing."
     ]
   }
-
-
 ]
