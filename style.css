@@ -440,6 +440,36 @@ input {
   color: #666;
 }
 
+
+#basicFiltersPanel {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+#sideFilterMenu {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+}
+
+/* FOOTER */
+#basicFiltersPanel .advanced-footer {
+  flex-shrink: 0;
+
+  position: sticky;
+  bottom: 0;
+
+  background: white;
+  z-index: 10;
+}
+
 /*ADVANCED FILTERING*/
 /*close button*/
 .panel-close-btn {
@@ -1128,7 +1158,7 @@ button:focus-visible {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 

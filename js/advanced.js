@@ -332,20 +332,21 @@ export function addAdvancedRow() {
 export function initAdvancedUI() {
   document.getElementById("addAdvancedRow")?.addEventListener("click", addAdvancedRow);
 
-  document.getElementById("clearAdvanced")?.addEventListener("click", () => {
-    state.activeTags.clear();
-    state.searchQuery = "";
+  ["clearBasic", "clearAdvanced"].forEach(id => {
+    document.getElementById(id)?.addEventListener("click", () => {
+      state.activeTags.clear();
+      state.searchQuery = "";
 
-    document.getElementById("search").value = "";
+      document.getElementById("search").value = "";
 
-    document.querySelectorAll("#sideFilterMenu input[type='checkbox']")
-      .forEach(cb => cb.checked = false);
+      document.querySelectorAll("#sideFilterMenu input[type='checkbox']")
+        .forEach(cb => cb.checked = false);
 
-    resetAdvancedFilters();   
-    applyFilters();
-   updateStatus();
+      resetAdvancedFilters();   
+      applyFilters();
+    updateStatus();
+    });
   });
-
 
   document.getElementById("closeAdvancedPanel")?.addEventListener("click", () => {
     document.querySelector(".layout")?.classList.remove("filters-open");
