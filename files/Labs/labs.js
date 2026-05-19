@@ -1,4 +1,4 @@
-let assignmentsData = [];
+let labsData = [];
 
 /* -------------------------
    ONE DRIVE CONFIG
@@ -22,17 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const searchBar = document.getElementById("searchBar");
 
-  fetch("./assignments.json")
+  fetch("./labs.json")
     .then(res => res.json())
     .then(data => {
 
-      assignmentsData = data.sort((a, b) =>
+      labsData = data.sort((a, b) =>
         (a.title || "").localeCompare(b.title || "", undefined, {
           sensitivity: "base"
         })
       );
 
-      renderCards(assignmentsData);
+      renderCards(labsData);
     });
 
   /* -------------------------
@@ -64,21 +64,21 @@ document.addEventListener("DOMContentLoaded", () => {
 --------------------------*/
 function renderCards(data) {
 
-  const container = document.getElementById("assignmentsContainer");
+  const container = document.getElementById("labsContainer");
   container.innerHTML = "";
 
-  for (const assignment of data) {
+  for (const lab of data) {
 
-    const fileURL = getFileURL(assignment.file);
+    const fileURL = getFileURL(lab.file);
 
     const card = document.createElement("div");
     card.className = "assignment-card clickable";
 
-    card.dataset.title = assignment.title || "";
+    card.dataset.title = lab.title || "";
 
     card.innerHTML = `
       <div class="card-content">
-        <h2>${assignment.title}</h2>
+        <h2>${lab.title}</h2>
 
         <a class="btn download-btn"
            href="${fileURL}">

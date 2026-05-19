@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Python Example Codes",
+    "file": "Python-Example-Codes.zip"
+  },
+  {
+    "title": "Python Functions and Turtle Graphics Lab",
+    "file": "Python-Functions-and-Turtle-Graphics-Lab.ipynb"
+  },
+  {
+    "title": "Python Grading and Calculator Lab",
+    "file": "Python-Grading-and-Calculator-Lab.ipynb"
+  },
+  {
+    "title": "Python Guessing Game and Nested Loops Lab",
+    "file": "Python-Guessing-Game-and-Nested-Loops-Lab.ipynb"
+  },
+  {
+    "title": "Python List Manipulation and Loops Lab",
+    "file": "Python-List-Manipulation-and-Loops-Lab.ipynb"
+  },
+  {
+    "title": "Python Loops and Conditionals",
+    "file": "Python-Loops-and-Conditionals.ipynb"
+  },
+  {
+    "title": "Python Loops Patterns and Grading Lab",
+    "file": "Python-Loops-Patterns-and-Grading-Lab.ipynb"
+  },
+  {
+    "title": "Python Replit Lab 1",
+    "file": "Python-Replit-Lab1.zip"
+  },
+  {
+    "title": "Python Temp Conversion and Conditionals Lab",
+    "file": "Python-Temp-Conversion-and-Conditionals-Lab.ipynb"
+  },
+  {
+    "title": "Python Tip Calculator and Bill Splitter Part 1",
+    "file": "Python-Tip-Calculator-and-Bill-Splitter-Part1.ipynb"
+  },
+  {
+    "title": "Python Tip Calculator and Bill Splitter Part 2",
+    "file": "Python-Tip-Calculator-and-Bill-Splitter-Part2.ipynb"
+  },
+  {
+    "title": "Python User Input and Boolean Comparisons",
+    "file": "Python-User-Input-and-Boolean-Comparisons.ipynb"
+  },
+  {
+    "title": "Python Variables IO",
+    "file": "Python-Variables-IO.ipynb"
+  }
+]
