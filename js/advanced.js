@@ -271,8 +271,9 @@ export function addAdvancedRow() {
     <div class="adv-selected-tags"></div>
 
     <div class="row-actions">
-      ${!isFirst ? `<button class="delete-row-btn">− Del Row</button>` : ""}
       <button class="add-tag-btn">+ Add Tag</button>
+      ${!isFirst ? `<button class="delete-row-btn">− Del Row</button>` : ""}
+      
     </div>
   `;
 
