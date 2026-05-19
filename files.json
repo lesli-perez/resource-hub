@@ -6,7 +6,7 @@
     "image": "files/Teachable-Machine/teachable-machine-test.png",
     "tags": {
       "Format": ["Plug and Play"],
-      "Time": ["5 mins."],
+      "Time": ["5 mins"],
       "Type": ["Activity", "Tool"],
       "Level": ["Beginner"],
       "Topic": ["Machine Learning", "AI", "No Code"]
@@ -44,7 +44,7 @@
     "tags": {
       "Format": ["Plug and Play"],
       "Type": ["Tool", "Lecture"],
-      "Time": ["5 mins."],
+      "Time": ["5 mins"],
       "Level": ["Intermediate"],
       "Topic": ["AI", "LLM"]
     },
@@ -101,7 +101,7 @@
     "tags": {
       "Format": ["Self-paced"],
       "Type": ["Tutorial"],
-      "Time": ["30 mins."],
+      "Time": ["30 mins"],
       "Level": ["Intermediate"],
       "Topic": ["Game Development", "Godot 4", "Multiplayer", "Computer Networking", "3D Game"]
     },
@@ -272,7 +272,7 @@
   "tags": {
     "Format": ["Reference"],
     "Type": ["Tool"],
-    "Time": ["5 mins."],
+    "Time": ["5 mins"],
     "Level": ["Beginner"],
     "Topic": ["Conversions", "Binary", "Hexadecimal", "Decimal"]
   },

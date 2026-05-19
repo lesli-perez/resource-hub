@@ -71,6 +71,9 @@ input {
   cursor: pointer;
 }
 
+.filter-btn:active {
+  transform: scale(0.97);
+}
 
 
 /* FILTER DROPDOWN */
@@ -1122,7 +1125,7 @@ button:focus-visible {
 }
 
 /* =========================
-   TOOLTIP (FIXED POSITIONING)
+   TOOLTIP 
 ========================= */
 
 .help-tooltip {
@@ -1445,4 +1448,129 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+
+
+/* =========================
+   SORT WRAPPER
+   (matches your tag-dropdown system)
+========================= */
+
+.sort-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* MAIN SORT BUTTON */
+.sort-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  font-size: 13px;
+  color: #333;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  white-space: nowrap;
+
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+/* hover like your buttons */
+.sort-btn:hover {
+  background: #f5f5f5;
+}
+
+/* click feel */
+.sort-btn:active {
+  transform: scale(0.97);
+}
+
+/* arrow */
+.sort-arrow {
+  font-size: 16px;
+  color: #777;
+  transition: transform 0.15s ease;
+}
+
+/* rotate arrow when open */
+.sort-wrapper.open .sort-arrow {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   SORT DROPDOWN MENU
+========================= */
+
+.sort-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  padding: 6px;
+  width: 220px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+  z-index: 9999;
+
+  max-height: 260px;
+  overflow-y: auto;
+
+  display: none;
+}
+
+/* open state */
+.sort-wrapper.open .sort-menu {
+  display: block;
+}
+
+/* =========================
+   SORT OPTIONS
+========================= */
+
+.sort-option {
+  padding: 6px 8px;
+  border-radius: 6px;
+
+  font-size: 13px;
+  color: #333;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* hover */
+.sort-option:hover {
+  background: #f5f5f5;
+}
+
+/* active state */
+.sort-option.active {
+  background: #f3f3f3;
+  font-weight: 500;
+}
+
+.sort-check {
+  font-size: 11px;
+  color: #999;
+}
+
+.sort-option:active {
+  transform: scale(0.98);
 }

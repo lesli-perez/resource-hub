@@ -3,12 +3,12 @@ import { getAllTags } from "./helpers.js";
 import { render } from "./render.js";
 import { updateStatus } from "./ui.js";
 import { applyAdvancedFilters } from "./advanced.js";
+import { sortItems } from "./sort.js";
 
 export function applyFilters() {
   let results = state.data;
 
   const query = state.searchQuery;
-
   const isAdvancedActive = state.mode === "advanced";
 
   /* SEARCH */
@@ -21,7 +21,7 @@ export function applyFilters() {
     );
   }
 
-  /* MODE SWITCH */
+  /* FILTERS */
   if (isAdvancedActive) {
     results = applyAdvancedFilters(results);
   } else {
@@ -36,7 +36,11 @@ export function applyFilters() {
     }
   }
 
- state.filteredCount = results.length;
+  /* SORT */
+  results = sortItems(results, state.sortMode);
+
+  /* STATE + RENDER */
+  state.filteredCount = results.length;
 
   render(results);
   updateStatus();

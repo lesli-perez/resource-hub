@@ -67,3 +67,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 });
+
+const sortBtn = document.getElementById("sortBtn");
+const sortWrapper = document.querySelector(".sort-wrapper");
+const sortOptions = document.querySelectorAll(".sort-option");
+
+sortBtn.addEventListener("click", () => {
+  sortWrapper.classList.toggle("open");
+});
+
+sortOptions.forEach(opt => {
+  opt.addEventListener("click", () => {
+    state.sortMode = opt.dataset.value;
+    applyFilters();
+
+    sortWrapper.classList.remove("open");
+
+
+    sortBtn.innerHTML = `${opt.textContent} <span class="sort-arrow">▾</span>`;
+  });
+});

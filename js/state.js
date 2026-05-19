@@ -6,6 +6,7 @@ export const state = {
   flatTagCache: new WeakMap(),
   mode: "basic",
   filteredCount: 0,
+  sortMode: "default",
 };
 
 export let activeRow = null;
@@ -28,7 +29,7 @@ export const CATEGORY_ORDER = [
 ];
 
 export const TAG_ORDER = {
-  Time: ["5 mins.", "15 mins.", "30 mins.", "45 mins.", "1 hour", "2 hours", "Multi-day"],
+  Time: ["5 mins", "15 mins", "30 mins", "45 mins", "1 hour", "2 hours", "Multi-day"],
   Level: ["Beginner", "Intermediate", "Advanced", "Expert"]
 };
 

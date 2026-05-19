@@ -23,22 +23,41 @@
 
 <h1>📁 Resource Hub</h1>
 
-<div class="topbar">
-  <div class="status" id="statusText">Viewing All Files</div>
+  <div class="topbar">
+    <div class="status" id="statusText">Viewing All Files</div>
 
-  <div class="top-actions">
-    <button class="btn" id="resetBtn">Show All</button>
+    <div class="top-actions">
 
-    <div class="filter-wrapper">
+      <button class="btn" id="resetBtn">Show All</button>
+
       <button class="filter-btn" id="filterBtn">
         Filters
       </button>
 
+      <div class="sort-wrapper">
+        <button class="sort-btn" id="sortBtn">
+          Sort By <span class="sort-arrow">▾</span>
+        </button>
+
+        <div class="sort-menu" id="sortMenu">
+          <div class="sort-option" data-value="time-asc">Time (Shortest)</div>
+          <div class="sort-option" data-value="time-desc">Time (Longest)</div>
+          <div class="sort-option" data-value="skill-asc">Skill (Easy → Hard)</div>
+          <div class="sort-option" data-value="skill-desc">Skill (Hard → Easy)</div>
+          <div class="sort-option" data-value="title-asc">Title (A → Z)</div>
+          <div class="sort-option" data-value="title-desc">Title (Z → A)</div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
 
-<input type="text" id="search" placeholder="Search...">
+
+
+
+  <input type="text" id="search" placeholder="Search...">
+
+
 
 <div class="layout">
 
@@ -71,10 +90,10 @@
           <b>Between rows:</b> AND / NOT logic<br><br>
 
           Example:<br>
-          Row 1: "Project" OR "5 mins."<br>
+          Row 1: "Project" OR "5 mins"<br>
           Row 2 (NOT): "1 hour"<br><br>
 
-          (Project || 5 mins.) && !(1 hour)
+          (Project || 5 mins) && !(1 hour)
         </div>
 
       </div>
