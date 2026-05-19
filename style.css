@@ -490,8 +490,8 @@ input {
 .advanced-body {
   padding: 10px 0 20px;
   flex: 1;
-  overflow-y: auto;
-
+  min-height: 0;
+  overflow: hidden;
 }
 
 .adv-values {
@@ -514,7 +514,7 @@ input {
   transition: background 0.15s ease;
   margin-bottom: 10px;
   margin-top: 10px;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .advanced-divider {
@@ -556,6 +556,7 @@ input {
 #advancedRows {
   flex: 1;           
   overflow-y: auto;   
+  min-height: 0;
   padding-right: 4px;  
 }
 
@@ -575,6 +576,15 @@ input {
   
 }
 
+#advancedFiltersPanel {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-height: 0;
+
+  overflow: hidden;
+}
 
 /*TAG DROPDOWN*/
 
