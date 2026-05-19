@@ -708,19 +708,38 @@ input {
   padding: 4px 8px;
   border-radius: 999px;
   background: #f3f3f3;
+
   cursor: pointer;
   user-select: none;
   border: none;
+
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+
   flex-wrap: wrap;
 
   display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
   width: auto;
   white-space: nowrap;
 
   flex: 0 0 auto;
+
+  transition: background 0.15s ease;
+}
+
+.adv-chip:hover {
+  background: #e7e7e7;
+}
+
+.adv-chip-x {
+  font-size: 10px;
+  opacity: 0.6;
+
+  pointer-events: none;
 }
 
 .tag-category {

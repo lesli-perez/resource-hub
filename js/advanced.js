@@ -495,14 +495,20 @@ export function syncAdvancedToBasicTopRow() {
 function createChip(tag, container) {
   const chip = document.createElement("span");
   chip.className = "adv-chip";
-  chip.textContent = tag;
   chip.dataset.tag = tag;
+
+  chip.innerHTML = `
+    <span class="adv-chip-label">${tag}</span>
+    <span class="adv-chip-x">✕</span>
+  `;
 
   chip.onclick = () => {
     chip.remove();
+
     syncAdvancedToBasicTopRow();
     syncCheckboxes();
-    applyFilters(); 
+
+    applyFilters();
     updateStatus();
   };
 
