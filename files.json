@@ -165,22 +165,6 @@
     ]
 },
 {
-    "title": "Assignments Archive",
-    "url": "./files/Assignments/assignments.html",
-    "file": "files/Assignments/Assignments-Preview.png",
-    "image": "files/Assignments/Assignments-Preview.png",
-    "tags": {
-      "Format": ["Reference"],
-      "Type": ["PDFs", "Activity"],
-      "Time": ["1 hour", "2 hours", "Multi-day"],
-      "Level": ["Beginner", "Intermediate"],
-      "Topic": ["Multi-topic"]
-    },
-    "description": [
-      "A collection of miscellaneous assignments and classroom work materials grouped into a single archive page."
-    ]
-},
-{
     "title": "Cheat Sheets Archive",
     "url": "./files/Cheat-Sheets/cheat-sheets.html",
     "file": "files/Cheat-Sheets/cheat-sheets-preview.png",
@@ -194,38 +178,6 @@
     },
     "description": [
       "A collection of miscellaneous cheat sheets and reference documents grouped into a single archive page."
-    ]
-},
-{
-    "title": "Exams/Quizzes Archive",
-    "url": "./files/Exams-Quizzes/exams-quizzes.html",
-    "file": "files/Exams-Quizzes/exams-quizzes-preview.png",
-    "image": "files/Exams-Quizzes/exams-quizzes-preview.png",
-    "tags": {
-      "Format": ["Reference"],
-      "Type": ["PDFs", "Activity"],
-      "Time": ["1 hour", "2 hours", "Multi-day"],
-      "Level": ["Beginner", "Intermediate"],
-      "Topic": ["Multi-topic"]
-    },
-    "description": [
-      "A collection of miscellaneous exams, quizzes, and multiple choice assignments grouped into a single archive page."
-    ]
-},
-{
-    "title": "Labs Archive",
-    "url": "./files/Labs/labs.html",
-    "file": "files/Labs/labs-preview.png",
-    "image": "files/Labs/labs-preview.png",
-    "tags": {
-      "Format": ["Reference"],
-      "Type": ["PDFs", "Activity"],
-      "Time": ["1 hour", "2 hours", "Multi-day"],
-      "Level": ["Beginner", "Intermediate"],
-      "Topic": ["Multi-topic"]
-    },
-    "description": [
-      "A collection of miscellaneous labs and short assignments grouped into a single archive page."
     ]
 },
 {
