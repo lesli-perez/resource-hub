@@ -1,6 +1,9 @@
 <h2>📁 Resource Hub</h2>
 <p>
-  <a href="https://lesli-perez.github.io/resource-hub/"><strong>View the website here</strong></a>
+Visit the student website 
+  <a href="https://lesli-perez.github.io/resource-hub/"><strong>here.</strong></a>
+
+Any changes made to the Student Website will NOT be reflected in the OneDrive (iykyk).
 </p>
 
 <h3>✚ Adding a New Resource</h3>
@@ -29,14 +32,14 @@ To add a new entry (card/resource), edit <code>files.json</code> and add a new o
 <h3>📎 Adding Files & Images</h3>
 <ol>
   <li>Create a new folder inside <code>/files</code></li>
-  <li>Name it after your resource (use hyphens or camelCase)</li>
+  <li>Name it after your resource</li>
   <li>Place all related assets inside that folder</li>
   <li>Reference them using relative paths</li>
   <li><strong>You can find page templates under <code>/Template-HTML-Pages</code> for project/activity/assignment pages.</strong></li>
 </ol>
 
-<pre><code>"file": "files/my-resource/my-file.zip",
-"image": "files/my-resource/preview.png"</code></pre>
+<pre><code>"file": "files/Your-Resource/file-name.zip",
+"image": "files/Your-Resource/image-name.png"</code></pre>
 
 <h3>⚠️ Important Rules</h3>
 <ul>
@@ -46,33 +49,32 @@ To add a new entry (card/resource), edit <code>files.json</code> and add a new o
   <li>Use <strong>relative paths</strong> for <code>file</code> and <code>image</code></li>
   <li>Do not leave trailing commas in JSON</li>
   <li>The easiest way to add a new entry is to copy an existing one and modify it.</li>
-  <li>Double-check that all URLs, images, and file paths are correct and working before pushing.</li>
+  <li>Double-check that all URLs, images, and file paths are correct and working.</li>
+ <li>If you have multiple files for one resource, make a <strong>.ZIP</strong> file.</li>
 </ul>
 
 <hr>
 
-<h3>✚ Adding a New Slide Deck/PowerPoint</h3>
+<h3>✚ Adding a New Cheat Sheet</h3>
 
 <p>
-To add a new entry (slides/PowerPoint), download and save your slides as a <strong>.pdf</strong> file and add it to <code>files/Slides/PDFs</code>, edit <code>slides.json</code> and add a new object following this format:
+To add a new <strong>Cheat Sheet</strong>, download and save your cheat sheet as a <strong>.pdf or image filetype</strong> and add it to <code>files/Cheat-Sheets/Cheat-Sheet-Files</code>, edit <code>cheat-sheets.json</code> and add a new object following this format:
 </p>
 
 <pre>
-  <code>{
-    "title": "Slide Deck Title",
-    "pdf": "../../files/slides/PDFs/PDF-Name.pdf",
-    "description": [
-        "Topics covered:",
-        "String (paragraph or HTML, e.g. &lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;)"
-      ]
+  <code>  {
+    "title": "Cheat Sheet Title",
+    "file": "Cheat-Sheet-Title.pdf"
   }</code>
 </pre>
+
 
 <h3>⚠️ Important Rules</h3>
 <ul>
   <li><strong>All fields are required</strong></li>
-  <li>Make sure your filetype is .PDF</li>
+  <li>Make sure your filetype is .PDF for slides and .PDF or IMAGE filetype for Cheat Sheets</li>
   <li>Do not leave trailing commas in JSON</li>
   <li>The easiest way to add a new entry is to copy an existing one and modify it.</li>
-  <li>Double-check that all URLs, images, and file paths are correct and working before pushing.</li>
+  <li>Double-check that all URLs, images, and file paths are correct and working.</li>
 </ul>
+
