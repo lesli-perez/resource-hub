@@ -117,7 +117,7 @@
     "file": "files/Koriel-intro/intro-cs.png",
     "image": "files/Koriel-intro/intro-cs.png",
     "tags": {
-      "Type": ["Course"],
+      "Type": ["Course", "Platform"],
       "Level": ["Beginner"],
       "Format": ["Self-paced"],
       "Topic": ["Computer Science", "Binary", "Logic", "Hardware", "History of CS"],
@@ -217,20 +217,201 @@
   ]
 },
 {
-  "title": "Conversions Assignment Problem Generator",
-  "url": "files/Problem-Generator/Problem-Generator.zip",
-  "file": "files/Problem-Generator/Problem-Generator.zip",
-  "image": "files/Problem-Generator/Problem-Generator.png",
+  "title": "Hugging Face",
+  "url": "https://huggingface.co",
+  "file": "files/Hugging-Face/hugging-face.png",
+  "image": "files/Hugging-Face/hugging-face.png",
   "tags": {
-    "Format": ["Reference"],
-    "Type": ["Tool"],
-    "Time": ["5 mins"],
-    "Level": ["Beginner"],
-    "Topic": ["Conversions", "Binary", "Hexadecimal", "Decimal"]
+    "Format": ["Self-paced", "Project"],
+    "Time": ["30 mins", "1 hour", "2 hours", "Multi-day"],
+    "Type": ["Platform", "Course", "Tool"],
+    "Level": ["Beginner", "Intermediate", "Advanced", "Expert"],
+    "Topic": ["Machine Learning", "AI", "Natural Language Processing", "Computer Vision", "LLM", "Deep Learning", "Reinforcement Learning", "3D Game"]
   },
   "description": [
-    "A utility program used to generate randomized decimal, binary, and hexadecimal conversion problems for introductory computer science assignments.",
-    "The program exports generated problems into a text file that can be reused for worksheets, practice, or classroom activities."
+    "Hugging Face is a machine learning teaching platform that allows users to explore, run, and train AI models for text, image, audio, and multimodal tasks. Beginners can use pretrained models with minimal coding, while advanced learners can fine-tune and deploy state-of-the-art models.",
+    "<ul><li>Compare model outputs using different prompts, datasets, and inference settings.</li><li>Learn machine learning workflows including tokenization, datasets, training, evaluation, and deployment.</li><li>Deep RL Course, ML for Games Course, Intro to AI Course, LLM Course, etc.</li></ul>",
+    "Free tutorials and courses are available through the Hugging Face learning portal."
+  ]
+},
+{
+  "title": "Google AI Studio",
+  "url": "https://aistudio.google.com/prompts/new_chat",
+  "file": "files/Google-AI-Studio/google-ai-studio.png",
+  "image": "files/Google-AI-Studio/google-ai-studio.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Time": ["5 mins", "30 mins", "1 hour"],
+    "Type": ["Tool", "Activity", "Platform"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": ["Generative AI", "Prompt Engineering", "LLM", "AI"]
+  },
+  "description": [
+    "Google AI Studio is a free browser-based platform for experimenting with Gemini models using prompts, chat, and multimodal inputs.",
+    "<ul><li>Compare outputs using different prompts and temperature settings.</li><li>Generate structured JSON outputs using response schemas.</li><li>Upload images, audio, PDFs, and text files for multimodal prompting.</li><li>Test basic grounding and retrieval workflows with external context.</li></ul>",
+    "AI Studio will <strong>not</strong> teach students backpropagation, gradient descent, loss functions, activation functions, or attention mechanisms. They are interacting with a 'black box.'"
+  ]
+},
+{
+  "title": "OpenAI Developers",
+  "url": "https://developers.openai.com/learn",
+  "file": "files/OpenAI-Developers/openai-developers.png",
+  "image": "files/OpenAI-Developers/openai-developers.png",
+  "tags": {
+    "Format": ["Self-paced", "Project"],
+    "Time": ["30 mins", "1 hour", "2 hours", "Multi-day"],
+    "Type": ["Tool", "Tutorial" ,"Course", "Platform"],
+    "Level": ["Intermediate", "Advanced"],
+    "Topic": ["LLM", "Agents", "App Development", "Python", "API"]
+  },
+   "description": [
+    "OpenAI Developers is a learning and documentation platform for building applications with OpenAI models using APIs and developer tools.",
+    "<ul><li><b>Building agents (1–3 hours, Beginner):</b> Learn foundational concepts and build simple agent systems using tool use and step-by-step workflows.</li><li><b>AI app development: Concept to production (2–4 hours, Intermediate):</b> Build, deploy, and optimize AI applications from prototype to working product.</li><li><b>Model optimization (1–2 hours, Advanced):</b> Explore fine-tuning, distillation, and techniques for improving performance and cost efficiency.</li></ul>",
+     "Includes structured courses plus a large collection of documentation, guides, API references, and developer tools for building real-world AI systems. Some API usage may require paid credits."
+  ]
+},
+{
+  "title": "MNIST Neural Network Visualizer",
+  "url": "https://mnist.kochjar.com/",
+  "file": "files/MNIST-Visualizer/mnist-visualizer.png",
+  "image": "files/MNIST-Visualizer/mnist-visualizer.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Time": ["5 mins", "30 mins"],
+    "Type": ["Tool", "Activity"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": ["Machine Learning", "Neural Networks", "Deep Learning", "Computer Vision"]
+  },
+  "description": [
+    "An interactive browser-based neural network trainer for MNIST number classification where students can modify model settings and observe learning in real time.",
+    "<ul><li>Train a neural network on handwritten digit classification and watch predictions improve over time.</li><li>Modify architecture and hyperparameters (e.g., layers, learning rate) and observe changes in performance.</li><li>Test model behavior by drawing digits and analyzing prediction confidence.</li></ul>",
+    "This tool focuses on real-time training behavior of neural networks, making concepts like learning dynamics, convergence, and misclassification observable directly in the browser."
+  ]
+},
+{
+  "title": "CNN Explainer",
+  "url": "https://poloclub.github.io/cnn-explainer/",
+  "file": "files/CNN-Explainer/cnn-explainer.png",
+  "image": "files/CNN-Explainer/cnn-explainer.png",
+  "tags": {
+    "Format": ["Plug and Play"],
+    "Type": ["Tool", "Activity"],
+    "Time": ["5 mins"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": ["Machine Learning", "Deep Learning", "Computer Vision", "CNN"]
+  },
+  "description": [
+    "Explains what convolutional neural networks (CNNs) are and how they process images.",
+    "<ul><li>Visualizes convolution filters detecting features like edges and textures.</li><li>Shows pooling layers reducing spatial size while retaining key information.</li><li>Displays feature maps across layers.</li><li>Demonstrates how extracted features are used for classification.</li></ul>",
+    "Combines conceptual explanations with interactive CNN visualization."
+  ]
+},
+{
+  "title": "SUMMIT Interactive Visualization",
+  "url": "https://fredhohman.com/summit/",
+  "file": "files/SUMMIT/summit.png",
+  "image": "files/SUMMIT/summit.png",
+  "tags": {
+    "Format": ["Plug and Play"],
+    "Type": ["Tool", "Lecture"],
+    "Time": ["5 mins"],
+    "Level": ["Intermediate"],
+    "Topic": ["Machine Learning", "Deep Learning", "Computer Vision", "Neural Networks"]
+  },
+  "description": [
+    "Interactive system for visualizing and summarizing learned features in deep neural networks.",
+    "<ul><li>Aggregates neuron activations to identify important features.</li><li>Visualizes relationships between neurons using attribution graphs.</li><li>Shows how learned features contribute to predictions.</li><li>Explores model behavior on large datasets like ImageNet.</li></ul>",
+    "Designed to help users understand how deep learning models make predictions at scale."
+  ]
+},
+{
+  "title": "TensorFlow Neural Network Playground",
+  "url": "https://playground.tensorflow.org/",
+  "file": "files/TensorFlow-Playground/playground.png",
+  "image": "files/TensorFlow-Playground/playground.png",
+  "tags": {
+    "Format": ["Plug and Play"],
+    "Type": ["Tool", "Activity"],
+    "Time": ["5 mins"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": ["Machine Learning", "Neural Networks", "Deep Learning", "TensorFlow"]
+  },
+  "description": [
+    "Interactive tool for building and training simple neural networks in the browser.",
+    "<ul><li>Train networks on toy datasets and visualize decision boundaries.</li><li>Adjust layers, neurons, activation functions, learning rate, and regularization.</li><li>Observe how parameter changes affect convergence and accuracy.</li><li>Compare model performance across different dataset patterns.</li></ul>",
+    "Explains neural networks as layered systems of connected units that learn by strengthening or weakening connections based on error feedback."
+  ]
+},
+{
+  "title": "PyTorch Tutorials",
+  "url": "https://docs.pytorch.org/tutorials/",
+  "file": "files/PyTorch-Tutorials/pytorch-tutorials.png",
+  "image": "files/PyTorch-Tutorials/pytorch-tutorials.png",
+  "tags": {
+    "Format": ["Self-paced", "Project"],
+    "Time": ["30 mins", "1 hour", "2 hours", "Multi-day"],
+    "Type": ["Tutorial", "Course", "Reference"],
+    "Level": ["Beginner", "Intermediate", "Advanced"],
+    "Topic": ["Machine Learning", "Deep Learning", "PyTorch", "Neural Networks", "Computer Vision", "Natural Language Processing", "AI"]
+  },
+  "description": [
+    "Official PyTorch tutorials and learning resources covering deep learning fundamentals, model training, deployment, and advanced AI workflows using the PyTorch framework.",
+    "<ul><li>Build and train neural networks using tensors, datasets, autograd, and optimization tools.</li><li>Learn computer vision workflows including CNNs, image classification, and transfer learning.</li><li>Explore natural language processing and transformer-based models.</li><li>Practice model deployment, GPU acceleration, and production workflows.</li></ul>",
+    "The tutorials range from beginner-friendly introductions to advanced implementation guides and are widely used for hands-on machine learning and deep learning education."
+  ]
+},
+{
+  "title": "GAN Lab",
+  "url": "https://poloclub.github.io/ganlab/",
+  "file": "files/GAN-Lab/ganlab.png",
+  "image": "files/GAN-Lab/ganlab.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Activity", "Lecture"],
+    "Time": ["5 mins", "30 mins", "1 hour"],
+    "Level": ["Beginner", "Intermediate", "Advanced"],
+    "Topic": ["Machine Learning", "Deep Learning", "Neural Networks", "Generative AI", "AI"]
+  },
+  "description": [
+    "Interactive browser-based tool for visualizing how Generative Adversarial Networks (GANs) train and generate data.",
+    "<ul><li>Visualizes generator and discriminator behavior in real time.</li><li>Adjust hyperparameters and observe training changes instantly.</li><li>Explore datasets, gradients, decision boundaries, and generated samples.</li></ul>",
+    "Useful for teaching/understanding GANs, adversarial training, and generative AI concepts without requiring installation."
+  ]
+},
+{
+  "title": "ConvNetJS",
+  "url": "https://cs.stanford.edu/people/karpathy/convnetjs/index.html",
+  "file": "files/ConvNetJS/convnetjs.png",
+  "image": "files/ConvNetJS/convnetjs.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Tutorial", "Reference", "Lecture"],
+    "Time": ["5 mins", "30 mins", "1 hour"],
+    "Level": ["Beginner", "Intermediate", "Advanced"],
+    "Topic": ["Machine Learning", "Deep Learning", "Neural Networks", "Computer Vision", "Reinforcement Learning", "JavaScript", "AI"]
+  },
+  "description": [
+    "Browser-based JavaScript deep learning library with interactive neural network demos and educational resources.",
+    "<ul><li>Includes demos for MNIST, CIFAR-10, autoencoders, reinforcement learning, and neural network visualization.</li><li>Contains a brief introduction to deep learning and neural networks.</li><li>Provides Getting Started guides and documentation for building and training models.</li></ul>",
+    "Useful for learning and experimenting with deep learning directly in the browser without installation."
+  ]
+},
+{
+  "title": "What-If Tool",
+  "url": "https://pair-code.github.io/what-if-tool/",
+  "file": "files/What-If-Tool/what-if-tool.gif",
+  "image": "files/What-If-Tool/what-if-tool.gif",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Activity", "Tutorial"],
+    "Time": ["5 mins", "30 mins", "1 hour"],
+    "Level": ["Intermediate", "Advanced"],
+    "Topic": ["Machine Learning", "AI", "Data Visualization", "Neural Networks"]
+  },
+  "description": [
+    "Interactive tool for analyzing and visualizing machine learning model predictions directly in the browser.",
+    "<ul><li>Includes built-in demos and tutorials for exploring model behavior and interpretability.</li><li>Explore classification results, confidence scores, and decision boundaries.</li><li>Modify feature values to test how predictions change.</li><li>Investigate dataset bias, fairness, and model behavior.</li></ul>",
+    "Useful for teaching model interpretability, debugging, fairness, and responsible AI concepts."
   ]
 }
 ]
