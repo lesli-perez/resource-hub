@@ -413,5 +413,27 @@
     "<ul><li>Includes built-in demos and tutorials for exploring model behavior and interpretability.</li><li>Explore classification results, confidence scores, and decision boundaries.</li><li>Modify feature values to test how predictions change.</li><li>Investigate dataset bias, fairness, and model behavior.</li></ul>",
     "Useful for teaching model interpretability, debugging, fairness, and responsible AI concepts."
   ]
+},
+{
+  "title": "Google Visual Blocks for ML",
+  "url": "https://visualblocks.withgoogle.com/#/",
+  "file": "files/Visual-Blocks-for-ML/visual-blocks-for-ml.png",
+  "image": "files/Visual-Blocks-for-ML/visual-blocks-for-ml.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Activity"],
+    "Time": ["30 mins", "1 hour", "2 hours"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": [
+      "AI",
+      "Machine Learning",
+      "No Code",
+      "Computer Vision"
+    ]
+  },
+  "description": [
+    "Visual Blocks for ML is a browser-based visual programming platform developed by Google for building machine learning and AI workflows using drag-and-drop blocks instead of traditional code.",
+    "<ul><li>Create AI workflows by connecting models, inputs, processors, APIs, and outputs in a node-based editor.</li><li>Prototype multimodal applications involving text, images, audio, and machine learning models.</li><li>Experiment with LLM chains, computer vision pipelines, and AI-assisted workflows.</li><li>Build and test AI systems visually without requiring advanced programming experience.</li></ul>"
+  ]
 }
 ]
