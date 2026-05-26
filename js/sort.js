@@ -6,42 +6,75 @@ import { TAG_ORDER } from "./state.js";
 export function getTimeValue(item) {
   const times = item.tags?.Time || [];
 
-  const values = times.map(t => {
-    if (!t) return null;
+  const values = times
+    .map(t => {
+      if (!t) return null;
 
-    const clean = t.toLowerCase().trim().replace(/\.$/, "");
+      const clean = t.toLowerCase().trim().replace(/\.$/, "");
 
-    // minutes
-    let minMatch = clean.match(/(\d+)\s*min/);
-    if (minMatch) return parseInt(minMatch[1]);
+      // minutes
+      let minMatch = clean.match(/(\d+)\s*min/);
+      if (minMatch) return parseInt(minMatch[1]);
 
-    // hours
-    let hourMatch = clean.match(/(\d+)\s*hour/);
-    if (hourMatch) return parseInt(hourMatch[1]) * 60;
+      // hours
+      let hourMatch = clean.match(/(\d+)\s*hour/);
+      if (hourMatch) return parseInt(hourMatch[1]) * 60;
 
-    // multi-day fallback
-    if (clean.includes("multi")) return 1440;
+      // multi-day fallback
+      if (clean.includes("multi")) return 1440;
 
-    return null;
-  }).filter(v => v !== null);
+      return null;
+    })
+    .filter(v => v !== null);
 
   return values.length ? Math.min(...values) : Infinity;
 }
 
 /* =========================
    SKILL / LEVEL SORT
-   (uses TAG_ORDER from state.js)
 ========================= */
 export function getSkillValue(item) {
   const levels = item.tags?.Level || [];
-
   const order = TAG_ORDER.Level || [];
 
-  const values = levels
-    .map(l => order.indexOf(l))
-    .filter(v => v !== -1);
+  // Convert level names into ordered indexes
+  const indexes = levels
+    .map(level => order.indexOf(level))
+    .filter(index => index !== -1)
+    .sort((a, b) => a - b);
 
-  return values.length ? Math.min(...values) : Infinity;
+  if (!indexes.length) return Infinity;
+
+  /*
+    Desired order:
+
+    Beginner
+    Beginner + Intermediate
+    Beginner + Intermediate + Advanced
+    Intermediate
+    Intermediate + Advanced
+    Advanced
+    Expert
+
+    Creates sortable values like:
+
+    [0]         => 0
+    [0,1]       => 0.1
+    [0,1,2]     => 0.12
+    [1]         => 1
+    [1,2]       => 1.2
+    [2]         => 2
+    [3]         => 3
+  */
+
+  const primary = indexes[0];
+  const secondary = indexes.slice(1).join("");
+
+  return parseFloat(
+    secondary
+      ? `${primary}.${secondary}`
+      : `${primary}`
+  );
 }
 
 /* =========================
@@ -54,35 +87,35 @@ export function sortItems(items, mode) {
 
     /* -------- TIME -------- */
     case "time-asc":
-      return arr.sort((a, b) =>
-        getTimeValue(a) - getTimeValue(b)
+      return arr.sort(
+        (a, b) => getTimeValue(a) - getTimeValue(b)
       );
 
     case "time-desc":
-      return arr.sort((a, b) =>
-        getTimeValue(b) - getTimeValue(a)
+      return arr.sort(
+        (a, b) => getTimeValue(b) - getTimeValue(a)
       );
 
     /* -------- SKILL -------- */
     case "skill-asc":
-      return arr.sort((a, b) =>
-        getSkillValue(a) - getSkillValue(b)
+      return arr.sort(
+        (a, b) => getSkillValue(a) - getSkillValue(b)
       );
 
     case "skill-desc":
-      return arr.sort((a, b) =>
-        getSkillValue(b) - getSkillValue(a)
+      return arr.sort(
+        (a, b) => getSkillValue(b) - getSkillValue(a)
       );
 
     /* -------- TITLE -------- */
     case "title-asc":
-      return arr.sort((a, b) =>
-        a.title.localeCompare(b.title)
+      return arr.sort(
+        (a, b) => a.title.localeCompare(b.title)
       );
 
     case "title-desc":
-      return arr.sort((a, b) =>
-        b.title.localeCompare(a.title)
+      return arr.sort(
+        (a, b) => b.title.localeCompare(a.title)
       );
 
     /* -------- DEFAULT -------- */
@@ -91,6 +124,9 @@ export function sortItems(items, mode) {
   }
 }
 
+/* =========================
+   CLOSE SORT MENU ON OUTSIDE CLICK
+========================= */
 document.addEventListener("click", (e) => {
   const sortWrapper = document.querySelector(".sort-wrapper");
   const sortBtn = document.getElementById("sortBtn");
