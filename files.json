@@ -435,5 +435,71 @@
     "Visual Blocks for ML is a browser-based visual programming platform developed by Google for building machine learning and AI workflows using drag-and-drop blocks instead of traditional code.",
     "<ul><li>Create AI workflows by connecting models, inputs, processors, APIs, and outputs in a node-based editor.</li><li>Prototype multimodal applications involving text, images, audio, and machine learning models.</li><li>Experiment with LLM chains, computer vision pipelines, and AI-assisted workflows.</li><li>Build and test AI systems visually without requiring advanced programming experience.</li></ul>"
   ]
+},
+{
+  "title": "Machine Learning  (Block-Based Programming)",
+  "url": "https://machinelearningforkids.co.uk/",
+  "file": "files/Machine-Learning-Platform/machinelearningforkids.gif",
+  "image": "files/Machine-Learning-Platform/machinelearningforkids.gif",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Activity"],
+    "Time": ["30 mins", "1 hour", "2 hours"],
+    "Level": ["Beginner"],
+    "Topic": [
+      "AI",
+      "Machine Learning",
+      "Scratch",
+      "Programming"
+    ]
+  },
+  "description": [
+    "A browser-based platform for creating and training machine learning models using simple interfaces designed for educational use.",
+    "<ul><li>Train classification models using text, image, number, or sound datasets.</li><li>Use trained models in Scratch projects to build interactive games and applications, or connect models to other coding environments.</li><li>Experiment with how training data quality and quantity affect model performance and generalization.</li><li>Explore full workflows from data collection to training and deployment in beginner-friendly formats.</li></ul>",
+    "Additional resources include a <a href=\"https://machinelearningforkids.co.uk/#!/worksheets\" target=\"_blank\">worksheets section</a> for guided activities and a <a href=\"https://machinelearningforkids.co.uk/#!/pretrained\" target=\"_blank\">pretrained models section</a> for experimenting with ready-made AI models."
+    ]
+},
+{
+  "title": "Snap! (Block-Based Programming)",
+  "url": "https://snap.berkeley.edu/",
+  "file": "files/Snap/snap.png",
+  "image": "files/Snap/snap.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Activity"],
+    "Time": ["30 mins", "1 hour", "2 hours"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": [
+      "Programming",
+      "Scratch",
+      "AI"
+    ]
+  },
+  "description": [
+    "Snap! is a browser-based block programming language developed at UC Berkeley that extends the Scratch-style interface with more advanced programming features.",
+    "<ul><li>Create programs using drag-and-drop blocks for logic, loops, variables, and functions.</li><li>Build custom blocks to define reusable behaviors and more advanced control structures.</li><li>Explore core computer science concepts such as abstraction, recursion, and higher-order functions.</li><li>Develop interactive games, simulations, and learning projects directly in the browser.</li></ul>"
+  ]
+},
+{
+  "title": "MIT App Inventor",
+  "url": "https://appinventor.mit.edu/explore/ai2/beginner-videos",
+  "file": "files/MIT-App-Inventor/mit-app-inventor.png",
+  "image": "files/MIT-App-Inventor/mit-app-inventor.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tutorial"],
+    "Time": ["30 mins", "1 hour"],
+    "Level": ["Beginner"],
+    "Topic": [
+      "Programming",
+      "Mobile App Development",
+      "Block Coding",
+      "Computer Science"
+    ]
+  },
+  "description": [
+    "A set of beginner tutorials for MIT App Inventor that teach how to build simple mobile apps using block-based programming.",
+    "<ul><li>Learn the basics of building Android/iOS apps using drag-and-drop blocks.</li><li>Follow guided tutorials such as Hello Codi, Talk to Me, Ball Bounce, and Digital Doodle.</li><li>Understand core app components like buttons, sensors, text-to-speech, and screen interaction.</li><li>Build and test working mobile apps step by step in a browser-based environment.</li></ul>"
+  ]
 }
 ]
