@@ -428,7 +428,8 @@
       "AI",
       "Machine Learning",
       "No Code",
-      "Computer Vision"
+      "Computer Vision",
+      "Block Coding"
     ]
   },
   "description": [
@@ -449,8 +450,9 @@
     "Topic": [
       "AI",
       "Machine Learning",
-      "Scratch",
-      "Programming"
+      "Block Coding",
+      "Programming",
+      "No Code"
     ]
   },
   "description": [
@@ -471,8 +473,9 @@
     "Level": ["Beginner", "Intermediate"],
     "Topic": [
       "Programming",
-      "Scratch",
-      "AI"
+      "Block Coding",
+      "AI",
+      "No Code"
     ]
   },
   "description": [
@@ -488,18 +491,43 @@
   "tags": {
     "Format": ["Plug and Play", "Self-paced"],
     "Type": ["Tutorial"],
-    "Time": ["30 mins", "1 hour"],
+    "Time": ["1 hour"],
     "Level": ["Beginner"],
     "Topic": [
       "Programming",
-      "Mobile App Development",
+      "No Code",
       "Block Coding",
-      "Computer Science"
+      "App Development"
     ]
   },
   "description": [
     "A set of beginner tutorials for MIT App Inventor that teach how to build simple mobile apps using block-based programming.",
     "<ul><li>Learn the basics of building Android/iOS apps using drag-and-drop blocks.</li><li>Follow guided tutorials such as Hello Codi, Talk to Me, Ball Bounce, and Digital Doodle.</li><li>Understand core app components like buttons, sensors, text-to-speech, and screen interaction.</li><li>Build and test working mobile apps step by step in a browser-based environment.</li></ul>"
+  ]
+},
+{
+  "title": "Dify AI",
+  "url": "https://dify.ai/",
+  "file": "files/Dify-AI/dify-ai.png",
+  "image": "files/Dify-AI/dify-ai.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Platform", "Activity"],
+    "Time": ["30 mins", "1 hour", "2 hours"],
+    "Level": ["Intermediate", "Advanced"],
+    "Topic": [
+      "AI",
+      "LLM",
+      "Prompt Engineering",
+      "Machine Learning",
+      "Block Coding",
+      "No Code"
+    ]
+  },
+  "description": [
+    "Dify AI is a platform for building and deploying LLM-based applications using visual workflows and low-code tools.",
+    "<ul><li>Design AI applications such as chatbots, assistants, and RAG systems using a visual workflow builder.</li><li>Manage prompts, datasets, and model configurations in a single development environment.</li><li>Build agent-based systems with tool use, retrieval, and API integrations.</li><li>Deploy and monitor AI applications with built-in logging and testing tools.</li></ul>",
+    "This <a href=\"https://www.youtube.com/watch?v=idT2Igu8X2w\" target=\"_blank\">YouTube tutorial</a> walks through setting up two simple AI chatbots in Dify, demonstrating how to configure prompts, connect models, and deploy a working application step by step."
   ]
 }
 ]
