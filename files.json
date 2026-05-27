@@ -532,5 +532,32 @@
     "This <a href=\"https://www.youtube.com/watch?v=idT2Igu8X2w\" target=\"_blank\">YouTube tutorial</a> walks through setting up two simple AI chatbots in Dify, demonstrating how to configure prompts, connect models, and deploy a working application step by step.",
     "<a href=\"https://docs.dify.ai/en/use-dify/getting-started/quick-start\" target = \"blank\">This document</a> from Dify AI shows you how to get started."
   ]
+},
+{
+  "title": "Movie Recommender in Python with Google Colab",
+  "url": "https://ai.plainenglish.io/beginners-guide-build-a-movie-recommender-in-python-with-google-colab-and-create-an-api-using-9803f7a623e0",
+  "file": "files/Movie-Recommender/movie-recommender.gif",
+  "image": "files/Movie-Recommender/movie-recommender.gif",
+  "tags": {
+    "Format": ["Project", "Self-paced"],
+    "Type": ["Tutorial", "Activity"],
+    "Time": ["1 hour"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": [
+      "Machine Learning",
+      "Python",
+      "Recommendation Systems",
+      "API",
+      "Google Colab",
+      "Flask",
+      "Data Science",
+      "AI"
+    ]
+  },
+  "description": [
+    "A beginner-friendly project for building a movie recommendation system using Python and Google Colab.",
+    "<ul><li>Load and process MovieLens datasets using pandas.</li><li>Create movie recommendations using similarity metrics.</li><li>Build and test a simple Flask API.</li><li>Students can experiment after completion with larger MovieLens datasets such as 10M or 20M.</li></ul>",
+    "Students can expand the project by using the older <a href = \"https://grouplens.org/datasets/movielens/100k/\" target = \"_blank\">MovieLens 100K dataset</a> and incorporating user demographic data as an additional challenge."
+  ]
 }
 ]
