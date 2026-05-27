@@ -230,7 +230,7 @@
   },
   "description": [
     "Hugging Face is a machine learning teaching platform that allows users to explore, run, and train AI models for text, image, audio, and multimodal tasks. Beginners can use pretrained models with minimal coding, while advanced learners can fine-tune and deploy state-of-the-art models.",
-    "<ul><li>Compare model outputs using different prompts, datasets, and inference settings.</li><li>Learn machine learning workflows including tokenization, datasets, training, evaluation, and deployment.</li><li>Deep RL Course, ML for Games Course, Intro to AI Course, LLM Course, etc.</li></ul>",
+    "<ul><li>Compare model outputs using different prompts, datasets, and inference settings.</li><li>Learn machine learning workflows including tokenization, datasets, training, evaluation, and deployment.</li><li>Deep RL Course, ML for Games Course, Intro to AI Course, LLM Course, etc.</li><li>Free datasets that can be used for Python projects.</li></ul>",
     "Free tutorials and courses are available through the Hugging Face learning portal."
   ]
 },
@@ -458,7 +458,8 @@
   "description": [
     "A browser-based platform for creating and training machine learning models using simple interfaces designed for educational use.",
     "<ul><li>Train classification models using text, image, number, or sound datasets.</li><li>Use trained models in Scratch projects to build interactive games and applications, or connect models to other coding environments.</li><li>Experiment with how training data quality and quantity affect model performance and generalization.</li><li>Explore full workflows from data collection to training and deployment in beginner-friendly formats.</li></ul>",
-    "Additional resources include a <a href=\"https://machinelearningforkids.co.uk/#!/worksheets\" target=\"_blank\">worksheets section</a> for guided activities and a <a href=\"https://machinelearningforkids.co.uk/#!/pretrained\" target=\"_blank\">pretrained models section</a> for experimenting with ready-made AI models."
+    "Additional resources include a <a href=\"https://machinelearningforkids.co.uk/#!/worksheets\" target=\"_blank\">worksheets section</a> for guided activities and a <a href=\"https://machinelearningforkids.co.uk/#!/pretrained\" target=\"_blank\">pretrained models section</a> for experimenting with ready-made AI models.",
+    "After logging in, you will also be able to explore datasets (Titanic Survivors, Phishing Email Prediction, Recognize Song Genres) that you can import <a href = \"https://machinelearningforkids.co.uk/#!/importdataset\" target = \"_blank\" >here.</a>"
     ]
 },
 {
@@ -480,7 +481,8 @@
   },
   "description": [
     "Snap! is a browser-based block programming language developed at UC Berkeley that extends the Scratch-style interface with more advanced programming features.",
-    "<ul><li>Create programs using drag-and-drop blocks for logic, loops, variables, and functions.</li><li>Build custom blocks to define reusable behaviors and more advanced control structures.</li><li>Explore core computer science concepts such as abstraction, recursion, and higher-order functions.</li><li>Develop interactive games, simulations, and learning projects directly in the browser.</li></ul>"
+    "<ul><li>Create programs using drag-and-drop blocks for logic, loops, variables, and functions.</li><li>Build custom blocks to define reusable behaviors and more advanced control structures.</li><li>Develop interactive games, simulations, and learning projects directly in the browser.</li></ul>",
+    "For more details on using Snap! to add AI elements to your projects please reference <a href = \"https://ecraft2learn.github.io/ai/\" target = \"_blank\">this GitHub page.</a>"
   ]
 },
 {
@@ -502,7 +504,7 @@
   },
   "description": [
     "A set of beginner tutorials for MIT App Inventor that teach how to build simple mobile apps using block-based programming.",
-    "<ul><li>Learn the basics of building Android/iOS apps using drag-and-drop blocks.</li><li>Follow guided tutorials such as Hello Codi, Talk to Me, Ball Bounce, and Digital Doodle.</li><li>Understand core app components like buttons, sensors, text-to-speech, and screen interaction.</li><li>Build and test working mobile apps step by step in a browser-based environment.</li></ul>"
+    "<ul><li>Learn the basics of building Android/iOS apps using drag-and-drop blocks.</li><li>Follow guided tutorials such as <a href = \"https://appinventor.mit.edu/explore/ai2/hello-codi.html\" target = \"_blank\">Hello Codi</a>, <a href = \"https://appinventor.mit.edu/explore/sites/all/files/hourofcode/BallBounceTutorial.pdf\" target = \"_blank\">Ball Bounce</a>, and <a href = \"https://appinventor.mit.edu/explore/sites/all/files/hourofcode/DigitalDoodle.pdf\" target = \"_blank\">Digital Doodle</a>.</li><li>Understand core app components like buttons, sensors, text-to-speech, and screen interaction.</li><li>Build and test working mobile apps step by step in a browser-based environment.</li></ul>"
   ]
 },
 {
@@ -527,7 +529,8 @@
   "description": [
     "Dify AI is a platform for building and deploying LLM-based applications using visual workflows and low-code tools.",
     "<ul><li>Design AI applications such as chatbots, assistants, and RAG systems using a visual workflow builder.</li><li>Manage prompts, datasets, and model configurations in a single development environment.</li><li>Build agent-based systems with tool use, retrieval, and API integrations.</li><li>Deploy and monitor AI applications with built-in logging and testing tools.</li></ul>",
-    "This <a href=\"https://www.youtube.com/watch?v=idT2Igu8X2w\" target=\"_blank\">YouTube tutorial</a> walks through setting up two simple AI chatbots in Dify, demonstrating how to configure prompts, connect models, and deploy a working application step by step."
+    "This <a href=\"https://www.youtube.com/watch?v=idT2Igu8X2w\" target=\"_blank\">YouTube tutorial</a> walks through setting up two simple AI chatbots in Dify, demonstrating how to configure prompts, connect models, and deploy a working application step by step.",
+    "<a href=\"https://docs.dify.ai/en/use-dify/getting-started/quick-start\" target = \"blank\">This document</a> from Dify AI shows you how to get started."
   ]
 }
 ]
