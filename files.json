@@ -584,5 +584,67 @@
     "A beginner-friendly weather web application project where students build a responsive interface that retrieves and displays live weather information using a public API.",
     "<ul><li>Learn how to fetch and process JSON data from a weather API.</li><li>Create a search feature that allows users to look up weather conditions by city.</li><li>Display weather information such as temperature, humidity, wind speed, and icons dynamically using JavaScript.</li><li>Practice working with HTML, CSS, and event-driven programming concepts.</li></ul>"
   ]
+},
+{
+  "title": "GeeksforGeeks Python Projects",
+  "url": "https://www.geeksforgeeks.org/gate/computer-science-projects/#python-projects-",
+  "file": "files/Project-Ideas/project-ideas.png",
+  "image": "files/Project-Ideas/project-ideas.png",
+  "tags": {
+    "Format": [
+      "Project",
+      "Self-paced"
+    ],
+    "Type": [
+      "Tutorial",
+      "Reference"
+    ],
+    "Time": [
+      "1 hour",
+      "2 hours",
+      "Multi-day"
+    ],
+    "Level": [
+      "Beginner",
+      "Intermediate",
+      "Advanced"
+    ],
+    "Topic": [
+      "Python",
+      "Programming",
+      "Computer Vision",
+      "Web Scraping",
+      "AI",
+      "Computer Science"
+    ]
+  },
+  "description": [
+    "A large collection of Python project ideas and tutorials covering beginner to advanced computer science topics including automation, AI, web development, computer vision, and data processing. Some projects worth noting are:",
+    "<ul><li><a href=\"https://www.geeksforgeeks.org/python/opencv-python-program-vehicle-detection-video-frame/\" target=\"_blank\">Vehicle Detection using OpenCV</a> introduces computer vision concepts for detecting moving vehicles in video frames.</li><li><a href=\"https://www.geeksforgeeks.org/python/morse-code-translator-python/\" target=\"_blank\">Morse Code Translator</a> is a beginner-friendly project focused on string processing and dictionaries.</li><li><a href=\"https://www.geeksforgeeks.org/python/implementing-web-scraping-python-beautiful-soup/\" target=\"_blank\">Web Scraping with Beautiful Soup</a> is especially useful because it can support data collection for many other programming and AI projects.</li><li><a href=\"https://www.geeksforgeeks.org/computer-vision/computer-vision-module-application-for-finding-a-target-in-a-live-camera/\" target=\"_blank\">Target Detection in a Live Camera Feed</a> explores real-time computer vision and object tracking concepts.</li></ul>"
+  ]
+},
+{
+  "title": "Figma Design Project Ideas",
+  "url": "https://www.figma.com/resource-library/computer-science-project-ideas/",
+  "file": "files/Figma-Projects/figma-projects.png",
+  "image": "files/Figma-Projects/figma-projects.png",
+  "tags": {
+    "Format": [
+      "Project",
+      "Self-paced"
+    ],
+    "Type": [
+      "Tutorial",
+      "Reference"
+    ],
+    "Time": ["1 hour", "2 hours", "Multi-day"],
+    "Level": ["Beginner", "Intermediate", "Advanced"],
+    "Topic": ["Computer Science", "Web Development", "UX/UI"]
+  },
+  "description": [
+    "A collection of computer science project ideas organized into beginner, intermediate, and advanced categories.",
+    "<ul><li><b>Beginner:</b> CRUD apps, forms, layouts, and basic UI patterns.</li><li><b>Intermediate:</b> APIs, data persistence, and multi-screen applications.</li><li><b>Advanced:</b> Multi-user systems, integrations, and production-level projects.</li></ul>",
+    "The resource mainly provides UI/UX templates and project inspiration rather than complete implementations."
+  ]
 }
 ]
