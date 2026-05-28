@@ -889,22 +889,22 @@ input {
 /* SCROLL TO TOP BUTTON */
 .scroll-top-btn {
   position: fixed;
-  bottom: 50px;
-  right: 100px;
+  bottom: 20px;
+  right: 10px;
 
-  background: none;
-  border: 1px solid #75084c;
+  background: #fdf6f7ab;
+  border: 1px solid;
   border-radius: 50%;
 
   color: #75084c;
-  font-size: 25px;
+  font-size: 20px;
   aspect-ratio: 1 / 1;
   font-weight: 600;
   line-height: 1;    
 
   cursor: pointer;
 
-  padding: 5px 15px 10px;
+  padding: 0px 10px 5px;
   box-sizing: border-box;
 
   opacity: 0;
