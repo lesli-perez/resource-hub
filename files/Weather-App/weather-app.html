@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Web App</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../../style.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon_io/site.webmanifest">
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- TITLE -->
+  <h1>💻 Weather Web App</h1>
+
+  <!-- HEADER BANNER -->
+  <div class="banner">
+    Build a beginner-friendly weather application using HTML, CSS, and JavaScript APIs.
+  </div>
+
+  <!-- BACK LINK -->
+  <a class="back-link" href="../../index.html">
+    ← Back to Home
+  </a>
+
+  <!-- INTRO SECTION -->
+  <div class="assignment-card">
+    <h2>Introduction</h2>
+    <p>
+      In this project, you will build a Weather Web App that allows users to search for a city and view the current weather conditions. 
+      You will learn how to work with APIs, handle user input, and dynamically update a webpage using JavaScript.
+    </p>
+
+    <p>
+      This project is designed for beginner computer science students and introduces important concepts used in modern web development.
+    </p>
+  </div>
+
+  <!-- Tutorial SECTION --> 
+  <div class="assignment-card clickable"
+       data-link="https://www.youtube.com/watch?v=iED55_Q-AvY">
+    <h2>Video Tutorial</h2>
+    <div class="step">
+      <img src="./weather-app.png" alt="Image">
+      <ul>
+        <li>Follow along with the project tutorial</li>
+        <li>Learn how APIs work</li>
+        <li>Test your skills with the coding challenges further down this page.</li>
+      </ul>
+
+    </div>
+    
+   
+    <P>
+      Click this card to open the YouTube tutorial used for this assignment.
+    </P>
+  </div>
+
+
+  <!-- EXAMPLE SECTION -->
+  <div class="assignment-card">
+    <h2> Example cities to test:</h2>
+    <ul>
+      <li>McAllen</li>
+      <li>South Padre Island</li>
+      <li>Seattle</li>
+      <li>Chicago</li>
+      <li>Knoxville</li>
+    </ul>
+
+    <p>
+      Your application should display weather information clearly and update dynamically whenever a new city is searched.
+    </p>
+  </div>
+
+
+
+  <!-- Extrassss CARD -->
+<div class="assignment-card">
+
+  <h2>Need an Extra Challenge?</h2>
+
+  <p>
+    Here are a few ideas for you to apply what you have learned without using a tutorial:
+  </p>
+
+  <ul>
+    <li>
+      Find a new API to add to your website and include it in your app! This could be:
+      <ul>
+        <li>UV Index</li>
+        <li>Sunrise/Sunset Times</li>
+        <li>Population/Demographic Stats</li>
+        <li>Google Maps Info</li>
+      </ul>
+    </li>
+
+    <li>
+      Use the other information included in the weather API you implemented in the tutorial, such as the "Last 10 Days" of weather info.
+    </li>
+
+    <li>
+      Create a "Quick Lookup" feature where popular cities are a click away (Create buttons with city names on them.).
+    </li>
+
+    <li>
+      Show an error message when users type an invalid city.
+    </li>
+
+    <li>
+      Add support for Celsius and Fahrenheit conversion.
+    </li>
+
+    <li>
+      Change the background or colors of the website depending on the current weather conditions.
+    </li>
+  </ul>
+
+  <p>
+    If you have other ideas, try to implement them with limited help. This is how you truly test your coding skills!
+  </p>
+
+</div>
+
+
+</div>
+
+<!-- CLICK HANDLER -->
+<script>
+document.querySelectorAll(".clickable").forEach(card => {
+  card.addEventListener("click", () => {
+    const link = card.getAttribute("data-link");
+    if (link) {
+      window.open(link, "_blank");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+

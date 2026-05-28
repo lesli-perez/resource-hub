@@ -231,7 +231,7 @@
   "description": [
     "Hugging Face is a machine learning teaching platform that allows users to explore, run, and train AI models for text, image, audio, and multimodal tasks. Beginners can use pretrained models with minimal coding, while advanced learners can fine-tune and deploy state-of-the-art models.",
     "<ul><li>Compare model outputs using different prompts, datasets, and inference settings.</li><li>Learn machine learning workflows including tokenization, datasets, training, evaluation, and deployment.</li><li>Deep RL Course, ML for Games Course, Intro to AI Course, LLM Course, etc.</li><li>Free datasets that can be used for Python projects.</li></ul>",
-    "Free tutorials and courses are available through the Hugging Face learning portal."
+    "Free tutorials <a href = 'https://huggingface.co/blog/proflead/hugging-face-tutorial' target = '_blank'>(like this QuickStart Guide)</a> and courses are available through the Hugging Face learning portal."
   ]
 },
 {
@@ -558,6 +558,31 @@
     "A beginner-friendly project for building a movie recommendation system using Python and Google Colab.",
     "<ul><li>Load and process MovieLens datasets using pandas.</li><li>Create movie recommendations using similarity metrics.</li><li>Build and test a simple Flask API.</li><li>Students can experiment after completion with larger MovieLens datasets such as 10M or 20M.</li></ul>",
     "Students can expand the project by using the older <a href = \"https://grouplens.org/datasets/movielens/100k/\" target = \"_blank\">MovieLens 100K dataset</a> and incorporating user demographic data as an additional challenge."
+  ]
+},
+{
+  "title": "Weather Web App",
+  "url": "./files/Weather-App/weather-app.html",
+  "file": "files/Weather-App/weather-app.png",
+  "image": "files/Weather-App/weather-app.png",
+  "tags": {
+    "Format": ["Project", "Self-paced"],
+    "Type": ["Tutorial", "Activity"],
+    "Time": ["1 hour", "2 hours"],
+    "Level": ["Beginner"],
+    "Topic": [
+      "Web Development",
+      "JavaScript",
+      "API",
+      "HTML",
+      "CSS",
+      "Programming",
+      "App Development"
+    ]
+  },
+  "description": [
+    "A beginner-friendly weather web application project where students build a responsive interface that retrieves and displays live weather information using a public API.",
+    "<ul><li>Learn how to fetch and process JSON data from a weather API.</li><li>Create a search feature that allows users to look up weather conditions by city.</li><li>Display weather information such as temperature, humidity, wind speed, and icons dynamically using JavaScript.</li><li>Practice working with HTML, CSS, and event-driven programming concepts.</li></ul>"
   ]
 }
 ]
