@@ -315,6 +315,7 @@ input {
   background: #fff;
   border: 1px solid #eee;
   border-radius: 16px;
+  overflow-x: auto;
 
   padding: 18px;
   margin: 15px 0;
@@ -1573,4 +1574,12 @@ button:focus-visible {
 
 .sort-option:active {
   transform: scale(0.98);
+}
+
+/* CODE STYLING */
+
+.code-block {
+  border-radius: 8px;
+  max-width: fit-content;
+  text-align: left;
 }

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon_io/site.webmanifest">
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- TITLE -->
+  <h1>💻 Movie Recommender</h1>
+
+  <!-- HEADER BANNER -->
+  <div class="banner">
+    Build a genre-based movie recommendation system with Python, the MovieLens dataset, and Flask, from <a href="https://ai.plainenglish.io/beginners-guide-build-a-movie-recommender-in-python-with-google-colab-and-create-an-api-using-9803f7a623e0" target="_blank">this Beginner’s Guide</a>.
+  </div>
+
+  <!-- BACK LINK -->
+  <a class="back-link" href="../../index.html">
+    ← Back to Home
+  </a>
+
+  <!-- INTRO SECTION -->
+  <div class="assignment-card">
+    <h2>Introduction</h2>
+    <p>
+      Recommendation systems have become a fundamental part of platforms like Netflix and YouTube. By suggesting content based on user behavior or similarities, they help personalize user experiences. In this article, we’ll create a simple recommendation system that suggests movies based on their genres using Python.
+    </p>
+  </div>
+
+  <!-- STEP / INSTRUCTIONS SECTION -->
+  <div class="assignment-card">
+    <h2>Instructions</h2>
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <div class="step-text">
+        <h3>Step 1: Setting Up Google Colab</h3>
+        <p>Google Colab is a free cloud-based environment that allows you to run Python code directly in your browser. Let’s set up our project in Colab and get started.</p>
+        <ul>
+          <li>Open Google Colab.</li>
+          <li>Create a new notebook.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step">
+
+      <div class="step-text">
+        <h3>Step 2: Importing the Movie Dataset</h3>
+
+        <p>
+          We’ll use the
+          <a href="./ml-1m.zip" target="_blank">MovieLens 1M dataset</a>
+          for this project.
+          <br>
+          You can find a variety of movie datasets on the following website:
+          <a href="https://grouplens.org/datasets/movielens/" target="_blank">GroupLens</a>
+        </p>
+
+      <img src="./1_zzOP-2-GRnikomcL1jI5nA.gif" alt="Step 2 image">
+ 
+
+     
+        <p>
+          <br>
+          Upload the dataset in Colab, then import the necessary libraries and datasets.
+        </p>
+     
+
+        <pre class="language-python code-block"><code>  import pandas as pd
+  import numpy as np
+  import matplotlib.pyplot as plt
+</code></pre>
+    
+
+      <p><br>We’ll now load the ratings, users, and movies datasets:</p>
+
+      <pre class="language-python code-block"><code>
+    ratings = pd.read_csv('ratings.dat',
+                          sep='::',
+                          engine='python',
+                          encoding='latin-1',
+                          names=['user_id', 'movie_id', 'rating', 'timestamp'],
+                          usecols=['user_id', 'movie_id', 'rating'])
+
+    users = pd.read_csv('users.dat',
+                        sep='::',
+                        engine='python',
+                        encoding='latin-1',
+                        names=['user_id', 'gender', 'age', 'occupation', 'zipcode'],
+                        usecols=['user_id', 'gender', 'zipcode', 'age'])
+
+    movies = pd.read_csv('movies.dat',
+                        sep='::',
+                        engine='python',
+                        encoding='latin-1',
+                        names=['movie_id', 'title', 'genres'],
+                        usecols=['movie_id', 'title', 'genres'])
+      </code></pre>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <div class="step-text">
+        <h3>Step 3: Preprocessing the Data</h3>
+        <p>Now that we have the dataset, we’ll clean and preprocess it for our recommendation model. We’ll first collect all unique genres from the dataset.</p>
+
+ <pre class="language-python code-block"><code>genre_labels = set()
+for s in movies['genres'].str.split('|').values:
+    genre_labels = genre_labels.union(set(s))
+</code></pre>
+<br>
+      <p>We’ll now define a function to count how frequently each genre appears.</p>
+
+       <pre class="language-python code-block"><code>def count_word(dataset, ref_col, census):
+    keyword_count = dict()
+    for s in census:
+        keyword_count[s] = 0
+    for census_keywords in dataset[ref_col].str.split('|'):
+        if type(census_keywords) == float and pd.isnull(census_keywords):
+            continue
+        for s in [s for s in census_keywords if s in census]:
+            if pd.notnull(s):
+                keyword_count[s] += 1
+    keyword_occurences = sorted(keyword_count.items(), key=lambda x: x[1], reverse=True)
+    return keyword_occurences, keyword_count
+
+# Get genre occurrences
+keyword_occurences, dum = count_word(movies, 'genres', genre_labels)
+print(keyword_occurences[:5])
+</code></pre>
+      <br>
+      <p>Next, we’ll split the genres into an array and convert them into strings.</p>
+       <pre class="language-python code-block"><code>movies['genres'] = movies['genres'].str.split('|')
+movies['genres'] = movies['genres'].fillna("").astype('str')</code></pre>
+
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step">
+      <div class="step-text">
+        <h3>Step 4: Build the Recommendation System</h3>
+        <p>Now, let’s build a recommendation system based on genre similarity. <br> <br>We’ll use TfidfVectorizer to transform the genres into numerical values, which will allow us to calculate their similarity.</p>
+        <pre class="language-python code-block"><code>from sklearn.feature_extraction.text import TfidfVectorizer
+
+tf = TfidfVectorizer(analyzer='word', ngram_range=(1, 2), min_df=1, stop_words='english')
+tfidf_matrix = tf.fit_transform(movies['genres'])</code></pre>
+
+        <p><br>We’ll calculate the cosine similarity between different movies based on their genres.</p>
+        <pre class="language-python code-block"><code>from sklearn.metrics.pairwise import linear_kernel
+
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+print(cosine_sim[:4, :4])</code></pre>
+
+
+          <p><br>We now define a function to get movie recommendations based on genre similarity.</p>
+
+          <pre class="language-python code-block"><code># Create a mapping from movie titles to indices
+titles = movies['title']
+indices = pd.Series(movies.index, index=movies['title'])
+
+def genre_recommendations(title):
+    idx = indices[title]
+    sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    sim_scores = sim_scores[1:21]
+    movie_indices = [i[0] for i in sim_scores]
+    return titles.iloc[movie_indices]</code></pre>
+
+    <p><br>Let’s test our system with a popular movie title:</p>
+<pre class="language-python code-block"><code>print(genre_recommendations('Toy Story (1995)').head(5))</code></pre>
+      </div>
+    </div>
+
+
+    <!-- STEP 5 -->
+    <div class="step">
+      <div class="step-text">
+        <h3>Step 5: Building an API Using Flask</h3>
+        <p>Now that we have a working recommendation system, we’ll build an API to expose it to the web.</p>
+        <pre class="language-python code-block"><code>!pip install Flask</code></pre>
+        <br><p>We will create a simple Flask application to serve movie recommendations.</p>
+         <pre class="language-python code-block"><code>from flask import Flask, jsonify, request
+from threading import Thread
+
+app = Flask(__name__)
+
+@app.route('/recommend', methods=['GET'])
+def recommend():
+    movie_name = request.args.get('movie_name')
+    if not movie_name:
+        return jsonify({"error": "Movie name is required"}), 400
+
+    try:
+        recommendations = genre_recommendations(movie_name)
+        return jsonify(recommendations.tolist())
+    except KeyError:
+        return jsonify({"error": "Movie not found"}), 404
+
+def run():
+    app.run(host='0.0.0.0', port=5000)
+    
+# Start the app
+thread = Thread(target=run)
+thread.start()</code></pre>
+
+          <br><p><strong>WARNING:</strong> This is a development server. Do not use it in a production deployment. Use a production WSGI server instead (e.g., Gunicorn or uWSGI) for deploying Flask applications.</p>
+          <br><p>To expose our local Flask server, we’ll use localtunnel:</p>
+           <pre class="language-python code-block"><code>!npm install -g localtunnel
+!lt --port 5000</code></pre>
+            <br><p>You can now test the API using Postman with a GET request. Simply enter the following URL in the request</p>
+            <pre class="language-python code-block"><code>https://<localtunnel-url>/recommend?movie_name=Toy%20Story%20(1995)</code></pre>
+              <br><p>Make sure to replace <localtunnel-url> with the actual URL provided by Localtunnel when you expose your Flask server.</p>
+
+          <figure style="text-align: left; display: inline-block;">
+            <img src="./local-tunnel-url.webp" alt="Localtunnel URL">
+            <figcaption style="text-align: center;">
+              Localtunnel URL
+            </figcaption>
+        </figure>
+            
+            <br>
+
+            <figure style="text-align: left; display: inline-block;">
+            <img src="./test-demo-api.webp" alt="Test demo of API">
+            <figcaption style="text-align: center;">
+             Test demo of API
+            </figcaption>
+        </figure>
+            
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- SECTION --> 
+  <div class="assignment-card">
+    <h2>Conclusion</h2>
+    <P>In this article, we have learned how to build a basic movie recommendation system using Python and how to deploy it via an API with Flask. You can now enhance this system by incorporating additional features like user ratings, content-based filtering, and more!</P>
+    <br>
+    <p>For the code, check out their GitHub repository: <a href="https://github.com/matheshyogeswaran/movie-recommender-with-flask" target="_blank">Movie Recommender with Flask.</a></p>
+
+  </div>
+
+
+</div>
+
+<!-- CLICK HANDLER -->
+<script>
+document.querySelectorAll(".clickable").forEach(card => {
+  card.addEventListener("click", () => {
+    const link = card.getAttribute("data-link");
+    if (link) {
+      window.open(link, "_blank");
+    }
+  });
+});
+</script>
+<!-- Code Style -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+</body>
+</html>
