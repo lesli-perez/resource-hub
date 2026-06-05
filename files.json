@@ -120,7 +120,7 @@
       "Type": ["Course", "Platform"],
       "Level": ["Beginner"],
       "Format": ["Self-paced"],
-      "Topic": ["Computer Science", "Binary", "Logic", "Hardware", "History of CS"],
+      "Topic": ["Binary", "Logic", "Hardware", "History of CS"],
       "Time": ["2 hours", "Multi-day"]
     },
     "description": [
@@ -190,7 +190,7 @@
       "Type": ["Activity"],
       "Time": ["1 hour"],
       "Level": ["Beginner"],
-      "Topic": ["Python", "Programming", "Game Development", "Computer Science"]
+      "Topic": ["Python", "Programming", "Game Development"]
     },
     "description": [
     "A beginner-friendly Tic Tac Toe programming activity designed for introductory computer science students using Python.",
@@ -348,9 +348,9 @@
   "file": "files/PyTorch-Tutorials/pytorch-tutorials.png",
   "image": "files/PyTorch-Tutorials/pytorch-tutorials.png",
   "tags": {
-    "Format": ["Self-paced", "Project"],
+    "Format": ["Self-paced", "Project", "Reference"],
     "Time": ["30 mins", "1 hour", "2 hours", "Multi-day"],
-    "Type": ["Tutorial", "Course", "Reference"],
+    "Type": ["Tutorial", "Course"],
     "Level": ["Beginner", "Intermediate", "Advanced"],
     "Topic": ["Machine Learning", "Deep Learning", "PyTorch", "Neural Networks", "Computer Vision", "Natural Language Processing", "AI"]
   },
@@ -384,8 +384,8 @@
   "file": "files/ConvNetJS/convnetjs.png",
   "image": "files/ConvNetJS/convnetjs.png",
   "tags": {
-    "Format": ["Plug and Play", "Self-paced"],
-    "Type": ["Tool", "Tutorial", "Reference", "Lecture"],
+    "Format": ["Plug and Play", "Self-paced", "Reference"],
+    "Type": ["Tool", "Tutorial", "Lecture"],
     "Time": ["5 mins", "30 mins", "1 hour"],
     "Level": ["Beginner", "Intermediate", "Advanced"],
     "Topic": ["Machine Learning", "Deep Learning", "Neural Networks", "Computer Vision", "Reinforcement Learning", "JavaScript", "AI"]
@@ -593,11 +593,11 @@
   "tags": {
     "Format": [
       "Project",
-      "Self-paced"
+      "Self-paced",
+      "Reference"
     ],
     "Type": [
-      "Tutorial",
-      "Reference"
+      "Tutorial"
     ],
     "Time": [
       "1 hour",
@@ -614,8 +614,7 @@
       "Programming",
       "Computer Vision",
       "Web Scraping",
-      "AI",
-      "Computer Science"
+      "AI"
     ]
   },
   "description": [
@@ -631,20 +630,128 @@
   "tags": {
     "Format": [
       "Project",
-      "Self-paced"
+      "Self-paced",
+      "Reference"
     ],
     "Type": [
-      "Tutorial",
-      "Reference"
+      "Tutorial"
     ],
     "Time": ["1 hour", "2 hours", "Multi-day"],
     "Level": ["Beginner", "Intermediate", "Advanced"],
-    "Topic": ["Computer Science", "Web Development", "UX/UI"]
+    "Topic": ["Web Development", "UX/UI"]
   },
   "description": [
     "A collection of computer science project ideas organized into beginner, intermediate, and advanced categories.",
     "<ul><li><b>Beginner:</b> CRUD apps, forms, layouts, and basic UI patterns.</li><li><b>Intermediate:</b> APIs, data persistence, and multi-screen applications.</li><li><b>Advanced:</b> Multi-user systems, integrations, and production-level projects.</li></ul>",
     "The resource mainly provides UI/UX templates and project inspiration rather than complete implementations."
+  ]
+},
+{
+  "title": "Project-Based Learning (GitHub Repository)",
+  "url": "https://github.com/practical-tutorials/project-based-learning",
+  "file": "files/Project-Based-Learning/project-based-learning.png",
+  "image": "files/Project-Based-Learning/project-based-learning.png",
+  "tags": {
+    "Format": ["Reference", "Self-paced"],
+    "Type": ["Tutorial", "Project", "Resource"],
+    "Time": ["1 hour", "2 hours", "Multi-day"],
+    "Level": ["Beginner", "Intermediate", "Advanced"],
+    "Topic": ["Programming", "Web Development", "Python", "JavaScript", "C/C++", "GitHub"]
+  },
+  "description": [
+  "A curated GitHub repository of hands-on, project-based tutorials designed to help learners build real-world programming skills across multiple languages and domains.",
+  "<ul><li><a href=\"https://github.com/practical-tutorials/project-based-learning#html-and-css\" target=\"_blank\">HTML and CSS section</a></li><li><a href=\"https://github.com/practical-tutorials/project-based-learning#python\" target=\"_blank\">Python section</a></li><li><a href=\"https://github.com/practical-tutorials/project-based-learning#javascript\" target=\"_blank\">JavaScript section</a></li><li><a href=\"https://github.com/practical-tutorials/project-based-learning#cc\" target=\"_blank\">C/C++ section</a></li></ul>",
+  "This repository provides a broader collection of project ideas for CS majors, while Resource Hub is curated specifically to align with the learning structure and goals of UTRGV courses."
+]
+},
+{
+  "title": "Teach Yourself Computer Science",
+  "url": "https://teachyourselfcs.com/",
+  "file": "files/Teach-Yourself-CS/teach-yourself-cs.png",
+  "image": "files/Teach-Yourself-CS/teach-yourself-cs.png",
+  "tags": {
+    "Format": ["Self-paced", "Reference"],
+    "Type": ["Course"],
+    "Time": ["Multi-day"],
+    "Level": ["Intermediate", "Advanced"],
+    "Topic": [
+      "Programming",
+      "Computer Networking",
+      "Computer Architecture"
+    ]
+  },
+   "description": [
+    "A self-study curriculum that recommends books, lectures, and resources for learning core computer science topics at a university level.",
+    "<ul><li>Programming</li><li>Computer Architecture</li><li>Algorithms and Data Structures</li><li>Math for CS</li><li>Operating Systems</li><li>Computer Networking</li><li>Databases</li><li>Languages and Compilers</li><li>Distributed Systems</li></ul>",
+    "Useful if students are interested in a specific topic, want to get ahead in a class, or want a deeper understanding of CS topics. Topics are available in multiple languages!"
+  ]
+},
+{
+  "title": "VisuAlgo",
+  "url": "https://visualgo.net/en",
+  "file": "files/VisuAlgo/visualgo.png",
+  "image": "files/VisuAlgo/visualgo.png",
+  "tags": {
+    "Format": ["Plug and Play"],
+    "Type": ["Tool", "Activity"],
+    "Time": ["5 mins", "30 mins", "1 hour"],
+    "Level": ["Beginner"],
+    "Topic": ["Algorithms", "Data Structures"]
+  },
+  "description": [
+    "Interactive platform for visualizing data structures and algorithms through animations and guided exploration. It includes sorting, trees, graphs, heaps, shortest paths, and many other CS topics.",
+    "<ul><li>Visualize algorithm execution step-by-step.</li><li>Experiment with custom inputs and datasets.</li></ul>"
+  ]
+},
+{
+  "title": "SQLBolt",
+  "url": "https://sqlbolt.com/",
+  "file": "files/SQLBolt/sqlbolt.png",
+  "image": "files/SQLBolt/sqlbolt.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Course", "Activity"],
+    "Time": ["1 hour", "2 hours"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": ["SQL", "Databases", "Programming"]
+  },
+  "description": [
+    "Interactive SQL exercises and lessons that teach database fundamentals. It covers queries, joins, aggregates, and database management concepts.",
+    "<ul><li>Practice SQL queries directly in the browser.</li><li>Learn SELECT, WHERE, ORDER BY, JOINs, and aggregates.</li><li>Complete hands-on exercises.</li></ul>"
+  ]
+},
+{
+  "title": "Learn Git Branching",
+  "url": "https://learngitbranching.js.org/",
+  "file": "files/Learn-Git-Branching/learn-git-branching.png",
+  "image": "files/Learn-Git-Branching/learn-git-branching.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Tool", "Activity"],
+    "Time": ["5 mins", "30 mins", "1 hour"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": ["Programming", "Git"]
+  },
+  "description": [
+    "Interactive browser-based tool for learning Git through visual branching simulations.",
+    "<ul><li>Practice Git commands in a safe virtual repository.</li><li>Visualize commits, branches, merges, and rebasing.</li></ul>"
+  ]
+},
+{
+  "title": "GitHub Learn",
+  "url": "https://learn.github.com/skills",
+  "file": "files/GitHub-Learn/github-learn.png",
+  "image": "files/GitHub-Learn/github-learn.png",
+  "tags": {
+    "Format": ["Plug and Play", "Self-paced"],
+    "Type": ["Course", "Activity"],
+    "Time": ["30 mins", "1 hour", "2 hours"],
+    "Level": ["Beginner", "Intermediate"],
+    "Topic": ["Programming", "Git", "GitHub"]
+  },
+  "description": [
+    "Interactive learning platform that teaches GitHub through hands-on exercises inside real repositories using GitHub features.",
+    "<ul><li>Learn GitHub workflows using real issues, commits, and pull requests.</li><li>Practice skills like Git, collaboration, and CI/CD.</li><li>Follow guided exercises and learn how to use GitHub.</li></ul>"
   ]
 }
 ]
